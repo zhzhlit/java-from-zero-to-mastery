@@ -1,1 +1,11 @@
 .worktrees/
+.DS_Store
+.idea/
+*.iml
+.vscode/
+target/
+**/target/
+node_modules/
+website/.vitepress/cache/
+website/.vitepress/dist/
+*.log
