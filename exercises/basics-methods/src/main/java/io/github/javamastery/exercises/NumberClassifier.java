@@ -1,4 +1,4 @@
-package io.github.javamastery.exercises.basicsmethods;
+package io.github.javamastery.exercises;
 
 public final class NumberClassifier {
 

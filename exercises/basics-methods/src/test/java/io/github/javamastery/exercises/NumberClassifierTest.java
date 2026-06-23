@@ -1,4 +1,4 @@
-package io.github.javamastery.exercises.basicsmethods;
+package io.github.javamastery.exercises;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
