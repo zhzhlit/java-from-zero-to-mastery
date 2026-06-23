@@ -31,7 +31,7 @@ verifiedAt: "2026-06-23"
 
 你刚加入一个 Java 项目，第一件事通常不是立刻写复杂业务，而是确认本地环境能否跑通：JDK 版本是否正确、项目能否编译、测试能否通过、程序能否启动。
 
-本章使用仓库中的第一个示例程序完成这条最小闭环。示例位于 [examples/first-java-program](../../../../examples/first-java-program)。它只做一件事：在终端输出：
+本章使用仓库中的第一个示例程序完成这条最小闭环。示例位于 `examples/first-java-program`。它只做一件事：在终端输出：
 
 ```text
 Hello, Java 21!
@@ -111,7 +111,7 @@ HelloJava
 
 ## 6. 可运行代码
 
-示例源码在 [examples/first-java-program](../../../../examples/first-java-program)。
+示例源码在 `examples/first-java-program`。
 
 核心代码如下：
 
