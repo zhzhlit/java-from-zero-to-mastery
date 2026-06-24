@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { fileURLToPath } from 'node:url'
 
 export default defineConfig({
   title: 'Java 从零到精通',
@@ -10,30 +9,20 @@ export default defineConfig({
     'en/README.md': 'en/index.md'
   },
   vite: {
-    resolve: {
-      alias: [
-        {
-          find: 'vue/server-renderer',
-          replacement: fileURLToPath(
-            new URL(
-              '../node_modules/@vue/server-renderer/dist/server-renderer.esm-bundler.js',
-              import.meta.url
-            )
-          )
-        },
-        {
-          find: /^vue$/,
-          replacement: fileURLToPath(
-            new URL('../node_modules/vue/dist/vue.esm-bundler.js', import.meta.url)
-          )
-        }
-      ]
+    ssr: {
+      external: ['vue', 'vue/server-renderer']
+    },
+    build: {
+      rollupOptions: {
+        external: ['vue', 'vue/server-renderer']
+      }
     }
   },
   locales: {
     root: {
       label: '简体中文',
-      lang: 'zh-CN'
+      lang: 'zh-CN',
+      link: '/'
     },
     en: {
       label: 'English',
@@ -42,6 +31,7 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    i18nRouting: false,
     search: {
       provider: 'local'
     },
@@ -57,8 +47,8 @@ export default defineConfig({
                 text: '第一个 Java 程序',
                 link: '/zh-CN/guide/01-getting-started/01-first-java-program'
               },
-              { text: 'Java 手册', link: '/zh-CN/handbook/' },
-              { text: '面试与复习', link: '/zh-CN/interview/' }
+              { text: 'Java 手册', link: '/zh-CN/handbook/README' },
+              { text: '面试与复习', link: '/zh-CN/interview/README' }
             ]
           },
           { text: '写作规范', link: '/zh-CN/writing-guide' }
@@ -78,8 +68,8 @@ export default defineConfig({
             {
               text: '参考资料',
               items: [
-                { text: 'Java 手册', link: '/zh-CN/handbook/' },
-                { text: '面试与复习', link: '/zh-CN/interview/' },
+                { text: 'Java 手册', link: '/zh-CN/handbook/README' },
+                { text: '面试与复习', link: '/zh-CN/interview/README' },
                 { text: '写作规范', link: '/zh-CN/writing-guide' }
               ]
             }
