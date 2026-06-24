@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前版本：v0.1 项目骨架。已经提供学习路线、首篇课程、可运行示例、自动测试练习和文档站；其余课程将按版本路线逐步发布。
+> 当前开发版本：v0.2.1。已经提供从第一个程序到方法的连续入门路线、可运行示例、starter/solution 练习和文档站。
 
 ## 三条学习主线
 
@@ -34,6 +34,14 @@ mvn -B -pl examples/first-java-program -am clean test
 java -cp examples/first-java-program/target/classes io.github.javamastery.examples.HelloJava
 ```
 
+验证 Java 基础示例与练习：
+
+```bash
+mvn -B -pl examples/java-basics -am test
+mvn -B -pl exercises/java-basics/starter -am compile
+mvn -B -pl exercises/java-basics/solution -am test
+```
+
 启动文档站：
 
 ```bash
@@ -52,6 +60,10 @@ npm run docs:build --prefix website
 
 - [学习路线](docs/zh-CN/roadmap/index.md)
 - [第一个 Java 程序](docs/zh-CN/guide/01-getting-started/01-first-java-program.md)
+- [开发环境与 IntelliJ IDEA](docs/zh-CN/guide/01-getting-started/02-development-environment-and-idea.md)
+- [变量与数据类型](docs/zh-CN/guide/01-getting-started/03-variables-and-data-types.md)
+- [流程控制](docs/zh-CN/guide/01-getting-started/04-control-flow.md)
+- [方法](docs/zh-CN/guide/01-getting-started/05-methods.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)
 - [贡献指南](CONTRIBUTING.md)
@@ -85,4 +97,3 @@ website/            VitePress 文档站
 - 代码及构建配置采用 [Apache License 2.0](LICENSE-CODE)。
 - 原创文档和图示采用 [CC BY 4.0](LICENSE-DOCS)。
 - 第三方素材遵循其各自声明的许可证。
-
