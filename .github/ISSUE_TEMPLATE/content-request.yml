@@ -1,0 +1,38 @@
+name: Content request
+description: 建议课程、手册、练习或项目主题
+title: "[Content] "
+labels: ["content"]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: 主题
+      placeholder: 例如：CompletableFuture 异步编排
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: 主要受众
+      options:
+        - 零基础学习者
+        - Java 初级开发者
+        - Java 中级开发者
+        - 面试与复习
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: 学习目标
+      description: 学习者完成后应该能够做什么？
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 建议范围与非目标
+      description: 建议包含什么，以及明确不包含什么。
+    validations:
+      required: true
+

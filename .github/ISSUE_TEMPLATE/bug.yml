@@ -1,0 +1,46 @@
+name: Bug report
+description: 报告代码、文档或构建问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: 感谢反馈。请提供可复现的信息，并移除密钥和个人数据。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题范围
+      options:
+        - 课程文档
+        - Java 示例
+        - 练习与测试
+        - 文档站
+        - CI / 构建
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 实际发生了什么？你期望什么？
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 在仓库根目录运行……
+        2. 打开……
+        3. 看到……
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      placeholder: Java 21.0.x, Maven 3.9.x, macOS/Linux/Windows
+    validations:
+      required: true
+
