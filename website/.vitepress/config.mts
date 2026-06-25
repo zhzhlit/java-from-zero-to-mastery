@@ -68,6 +68,18 @@ export default defineConfig({
               text: '方法',
               link: '/zh-CN/guide/01-getting-started/05-methods'
             },
+            {
+              text: '数组',
+              link: '/zh-CN/guide/01-getting-started/06-arrays'
+            },
+            {
+              text: '字符串与 StringBuilder',
+              link: '/zh-CN/guide/01-getting-started/07-strings-and-stringbuilder'
+            },
+            {
+              text: 'IntelliJ IDEA 调试',
+              link: '/zh-CN/guide/01-getting-started/08-debugging-with-intellij-idea'
+            },
             { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -100,6 +112,18 @@ export default defineConfig({
             {
               text: '方法',
               link: '/zh-CN/guide/01-getting-started/05-methods'
+            },
+            {
+              text: '数组',
+              link: '/zh-CN/guide/01-getting-started/06-arrays'
+            },
+            {
+              text: '字符串与 StringBuilder',
+              link: '/zh-CN/guide/01-getting-started/07-strings-and-stringbuilder'
+            },
+            {
+              text: 'IntelliJ IDEA 调试',
+              link: '/zh-CN/guide/01-getting-started/08-debugging-with-intellij-idea'
             }
           ]
         },

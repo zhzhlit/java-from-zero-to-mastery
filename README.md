@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前开发版本：v0.2.1。已经提供从第一个程序到方法的连续入门路线、可运行示例、starter/solution 练习和文档站。
+> 当前学习版本：v0.2.2。已经提供从第一个程序到数组、字符串与调试的连续入门路线，以及成绩统计器 starter/solution 练习。
 
 ## 三条学习主线
 
@@ -64,6 +64,10 @@ npm run docs:build --prefix website
 - [变量与数据类型](docs/zh-CN/guide/01-getting-started/03-variables-and-data-types.md)
 - [流程控制](docs/zh-CN/guide/01-getting-started/04-control-flow.md)
 - [方法](docs/zh-CN/guide/01-getting-started/05-methods.md)
+- [数组](docs/zh-CN/guide/01-getting-started/06-arrays.md)
+- [字符串与 StringBuilder](docs/zh-CN/guide/01-getting-started/07-strings-and-stringbuilder.md)
+- [IntelliJ IDEA 调试](docs/zh-CN/guide/01-getting-started/08-debugging-with-intellij-idea.md)
+- [成绩统计器练习](exercises/java-basics/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)
 - [贡献指南](CONTRIBUTING.md)
