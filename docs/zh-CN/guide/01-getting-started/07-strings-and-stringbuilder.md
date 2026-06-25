@@ -153,5 +153,6 @@ mvn -B -pl exercises/java-basics/solution -am \
 
 ## 下一步
 
-上一章：[数组](./06-arrays.md)  
+上一章：[数组](./06-arrays.md)
+
 下一章：[IntelliJ IDEA 调试](./08-debugging-with-intellij-idea.md)

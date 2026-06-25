@@ -178,5 +178,6 @@ mvn -B -pl examples/java-basics -am \
 
 ## 下一步
 
-上一章：[方法](./05-methods.md)  
+上一章：[方法](./05-methods.md)
+
 下一章：[字符串与 StringBuilder](./07-strings-and-stringbuilder.md)
