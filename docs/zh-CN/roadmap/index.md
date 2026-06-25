@@ -1,7 +1,7 @@
 ---
 status: learning-ready
 javaVersion: "21"
-verifiedAt: "2026-06-23"
+verifiedAt: "2026-06-24"
 ---
 
 # Java 学习路线图
@@ -31,3 +31,15 @@ verifiedAt: "2026-06-23"
 | 10. 扩展方向 | 前九阶段核心能力 | 面向架构、数据工程、Android、工具开发、开源协作等方向延伸 | 形成个人方向项目、技术文章或贡献记录 |
 
 默认导航只收录 `learning-ready` 或 `verified` 内容。`planned` 和空主题只能出现在路线图或维护计划中。
+
+## 当前可学习内容
+
+v0.2.1 已发布以下连续入门路线：
+
+1. [第一个 Java 程序](../guide/01-getting-started/01-first-java-program.md)
+2. [开发环境与 IntelliJ IDEA](../guide/01-getting-started/02-development-environment-and-idea.md)
+3. [变量与数据类型](../guide/01-getting-started/03-variables-and-data-types.md)
+4. [流程控制](../guide/01-getting-started/04-control-flow.md)
+5. [方法](../guide/01-getting-started/05-methods.md)
+
+数组、字符串、面向对象、异常和集合仍处于后续版本规划中，尚未进入默认学习导航。

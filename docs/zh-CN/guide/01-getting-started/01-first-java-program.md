@@ -279,6 +279,6 @@ public static String greeting(String name)
 
 ## 12. 下一步
 
-下一章建议学习 Java 的变量、基本类型和字符串拼接。它会回答一个更实际的问题：程序如何保存输入、处理数据，并把结果组织成可读的输出。
+继续学习：[开发环境与 IntelliJ IDEA](./02-development-environment-and-idea.md)。
 
-继续学习前，你也可以先完成本章三个练习，尤其是挑战题。它会让你第一次接触 `main(String[] args)` 中的 `args`，为后续理解输入、参数和程序状态打基础。
+进入下一章前，你也可以先完成本章三个练习，尤其是挑战题。它会让你第一次接触 `main(String[] args)` 中的 `args`，为后续理解输入、参数和程序状态打基础。
