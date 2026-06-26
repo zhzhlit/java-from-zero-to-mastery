@@ -30,6 +30,7 @@ mvn -B -pl exercises/object-oriented/solution -am test
 9. `StudyReportFileStore`：练习 `Path`、`Files`、UTF-8 文本读写和 `IOException`。
 10. `StudySchedule`：练习 `LocalDate`、`LocalTime`、`LocalDateTime`、`Duration` 和格式化输出。
 11. `StudyStreamAnalyzer`：练习 lambda、Stream 筛选、转换、排序、统计和方法引用。
+12. `StudyTaskStatus`、`StudyTaskPriority`、`StudyTask` 与 `StudyTaskBoard`：练习枚举、`Optional`、`Objects`、`StringJoiner`、`Comparator` 和 `EnumMap`。
 
 建议按以下顺序完成：
 
@@ -46,3 +47,4 @@ mvn -B -pl exercises/object-oriented/solution -am test
 11. 实现学习报告文件存储，用 `@TempDir` 测试保存、追加和读取。
 12. 实现学习日程，用固定日期时间测试开始时间、结束时间和日历行。
 13. 实现 Stream 分析器，用 `filter`、`map`、`sorted` 和 `mapToInt` 处理课程与评审结果。
+14. 实现学习任务看板，用枚举建模状态和优先级，并用常用标准库完成查询、排序和统计。
