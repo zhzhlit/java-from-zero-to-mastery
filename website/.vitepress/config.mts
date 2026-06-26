@@ -96,6 +96,10 @@ export default defineConfig({
             text: '接口',
             link: '/zh-CN/guide/02-java-core/04-interfaces'
           },
+          {
+            text: '异常处理',
+            link: '/zh-CN/guide/02-java-core/05-exceptions'
+          },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -156,6 +160,10 @@ export default defineConfig({
             {
               text: '接口',
               link: '/zh-CN/guide/02-java-core/04-interfaces'
+            },
+            {
+              text: '异常处理',
+              link: '/zh-CN/guide/02-java-core/05-exceptions'
             }
           ]
         },
