@@ -28,6 +28,7 @@ mvn -B -pl exercises/object-oriented/solution -am test
 7. `CourseCatalog`：练习 `List`、`Set`、`Map`、标签索引和只读集合返回。
 8. `LearningQueue<T>` 与 `ReviewResultSelector`：练习泛型类、泛型方法和类型参数上界。
 9. `StudyReportFileStore`：练习 `Path`、`Files`、UTF-8 文本读写和 `IOException`。
+10. `StudySchedule`：练习 `LocalDate`、`LocalTime`、`LocalDateTime`、`Duration` 和格式化输出。
 
 建议按以下顺序完成：
 
@@ -42,3 +43,4 @@ mvn -B -pl exercises/object-oriented/solution -am test
 9. 实现课程目录，用 `List` 保存课时顺序，用 `Set` 去重标签，用 `Map` 支持按标签查询。
 10. 实现泛型学习队列，并用 `<T extends ReviewResult>` 选择最佳评审结果。
 11. 实现学习报告文件存储，用 `@TempDir` 测试保存、追加和读取。
+12. 实现学习日程，用固定日期时间测试开始时间、结束时间和日历行。
