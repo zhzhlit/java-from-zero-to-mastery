@@ -26,6 +26,7 @@ mvn -B -pl exercises/object-oriented/solution -am test
 5. `ReviewResult`、`QuizResult` 与 `CodeReviewResult`：练习接口、默认方法和接口引用多态调用。
 6. `EnrollmentService` 与 `EnrollmentException`：练习参数校验、自定义异常和 `try/catch` 边界处理。
 7. `CourseCatalog`：练习 `List`、`Set`、`Map`、标签索引和只读集合返回。
+8. `LearningQueue<T>` 与 `ReviewResultSelector`：练习泛型类、泛型方法和类型参数上界。
 
 建议按以下顺序完成：
 
@@ -38,3 +39,4 @@ mvn -B -pl exercises/object-oriented/solution -am test
 7. 实现评审结果接口，并用 `ReviewResult[]` 汇总不同实现类的通过数量和报告文本。
 8. 实现课程报名服务，确保满员报名抛出 `EnrollmentException`，且失败后报名人数不变。
 9. 实现课程目录，用 `List` 保存课时顺序，用 `Set` 去重标签，用 `Map` 支持按标签查询。
+10. 实现泛型学习队列，并用 `<T extends ReviewResult>` 选择最佳评审结果。

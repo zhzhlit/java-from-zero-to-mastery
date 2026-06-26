@@ -210,4 +210,6 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 上一章：[异常处理](./05-exceptions.md)
 
+下一章：[泛型](./07-generics.md)
+
 继续查看：[学习路线](../../roadmap/index.md)
