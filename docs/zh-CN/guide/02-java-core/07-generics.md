@@ -212,4 +212,6 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 上一章：[集合](./06-collections.md)
 
+下一章：[文件 I/O](./08-file-io.md)
+
 继续查看：[学习路线](../../roadmap/index.md)
