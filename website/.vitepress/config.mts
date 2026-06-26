@@ -100,6 +100,10 @@ export default defineConfig({
             text: '异常处理',
             link: '/zh-CN/guide/02-java-core/05-exceptions'
           },
+          {
+            text: '集合',
+            link: '/zh-CN/guide/02-java-core/06-collections'
+          },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -164,6 +168,10 @@ export default defineConfig({
             {
               text: '异常处理',
               link: '/zh-CN/guide/02-java-core/05-exceptions'
+            },
+            {
+              text: '集合',
+              link: '/zh-CN/guide/02-java-core/06-collections'
             }
           ]
         },

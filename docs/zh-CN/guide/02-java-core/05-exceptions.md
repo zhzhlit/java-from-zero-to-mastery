@@ -176,4 +176,6 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 上一章：[接口](./04-interfaces.md)
 
+下一章：[集合](./06-collections.md)
+
 继续查看：[学习路线](../../roadmap/index.md)
