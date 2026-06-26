@@ -24,6 +24,7 @@ mvn -B -pl exercises/object-oriented/solution -am test
 3. `StudyGoal`：封装学习目标，保证完成分钟数不会超过目标分钟数。
 4. `LearningResource`、`VideoResource` 与 `ArticleResource`：练习继承、方法重写和父类引用多态调用。
 5. `ReviewResult`、`QuizResult` 与 `CodeReviewResult`：练习接口、默认方法和接口引用多态调用。
+6. `EnrollmentService` 与 `EnrollmentException`：练习参数校验、自定义异常和 `try/catch` 边界处理。
 
 建议按以下顺序完成：
 
@@ -34,3 +35,4 @@ mvn -B -pl exercises/object-oriented/solution -am test
 5. 实现 `StudyGoal`，练习用业务方法维护对象不变量。
 6. 实现学习资源继承层次，并用 `LearningResource[]` 汇总不同子类的预计学习时长。
 7. 实现评审结果接口，并用 `ReviewResult[]` 汇总不同实现类的通过数量和报告文本。
+8. 实现课程报名服务，确保满员报名抛出 `EnrollmentException`，且失败后报名人数不变。
