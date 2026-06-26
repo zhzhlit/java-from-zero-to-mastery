@@ -128,6 +128,10 @@ export default defineConfig({
             text: 'Java 核心综合复盘',
             link: '/zh-CN/guide/02-java-core/12-java-core-review'
           },
+          {
+            text: '测试、Maven 与工程化验证',
+            link: '/zh-CN/guide/03-engineering-foundation/01-testing-maven-ci'
+          },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -220,6 +224,10 @@ export default defineConfig({
             {
               text: 'Java 核心综合复盘',
               link: '/zh-CN/guide/02-java-core/12-java-core-review'
+            },
+            {
+              text: '测试、Maven 与工程化验证',
+              link: '/zh-CN/guide/03-engineering-foundation/01-testing-maven-ci'
             }
           ]
         },

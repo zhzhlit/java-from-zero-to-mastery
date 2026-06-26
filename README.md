@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.3.11。已经提供从第一个程序到 Java 核心综合复盘的连续学习路线，以及成绩统计器、课程进度、学习目标、学习资源、评审结果、课程报名、课程目录、泛型队列、学习报告文件、学习日程、Stream 分析、学习任务看板 starter/solution 练习和主项目命令行课程管理入口。
+> 当前学习版本：v0.4.0。已经提供从第一个程序到测试、Maven 与工程化验证的连续学习路线，以及成绩统计器、Java 核心综合练习、主项目命令行课程管理和工程化验证入口。
 
 ## 三条学习主线
 
@@ -94,6 +94,7 @@ npm run docs:build --prefix website
 - [Lambda 与 Stream API](docs/zh-CN/guide/02-java-core/10-lambda-streams.md)
 - [枚举与常用标准库](docs/zh-CN/guide/02-java-core/11-enums-standard-library.md)
 - [Java 核心综合复盘](docs/zh-CN/guide/02-java-core/12-java-core-review.md)
+- [测试、Maven 与工程化验证](docs/zh-CN/guide/03-engineering-foundation/01-testing-maven-ci.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
