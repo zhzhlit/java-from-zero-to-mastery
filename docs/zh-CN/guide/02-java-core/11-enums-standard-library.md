@@ -275,4 +275,4 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 上一章：[Lambda 与 Stream API](./10-lambda-streams.md)
 
-继续查看：[学习路线](../../roadmap/index.md)
+下一章：[Java 核心阶段复盘](./12-java-core-review.md)
