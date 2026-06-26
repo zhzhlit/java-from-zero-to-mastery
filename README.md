@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.3.1。已经提供从第一个程序到封装的连续学习路线，以及成绩统计器、课程进度与学习目标 starter/solution 练习。
+> 当前学习版本：v0.3.2。已经提供从第一个程序到继承与多态的连续学习路线，以及成绩统计器、课程进度、学习目标与学习资源 starter/solution 练习。
 
 ## 三条学习主线
 
@@ -77,6 +77,7 @@ npm run docs:build --prefix website
 - [IntelliJ IDEA 调试](docs/zh-CN/guide/01-getting-started/08-debugging-with-intellij-idea.md)
 - [类与对象](docs/zh-CN/guide/02-java-core/01-classes-and-objects.md)
 - [封装](docs/zh-CN/guide/02-java-core/02-encapsulation.md)
+- [继承与多态](docs/zh-CN/guide/02-java-core/03-inheritance-and-polymorphism.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)

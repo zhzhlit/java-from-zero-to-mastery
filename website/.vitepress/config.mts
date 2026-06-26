@@ -88,6 +88,10 @@ export default defineConfig({
             text: '封装',
             link: '/zh-CN/guide/02-java-core/02-encapsulation'
           },
+          {
+            text: '继承与多态',
+            link: '/zh-CN/guide/02-java-core/03-inheritance-and-polymorphism'
+          },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -140,6 +144,10 @@ export default defineConfig({
             {
               text: '封装',
               link: '/zh-CN/guide/02-java-core/02-encapsulation'
+            },
+            {
+              text: '继承与多态',
+              link: '/zh-CN/guide/02-java-core/03-inheritance-and-polymorphism'
             }
           ]
         },
