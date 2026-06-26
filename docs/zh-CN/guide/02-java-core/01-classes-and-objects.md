@@ -191,4 +191,6 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 上一章：[IntelliJ IDEA 调试](../01-getting-started/08-debugging-with-intellij-idea.md)
 
+下一章：[封装](./02-encapsulation.md)
+
 继续查看：[学习路线](../../roadmap/index.md)
