@@ -21,6 +21,7 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 1. `Lesson`：使用字段、构造器和 getter 保存课时标题与时长。
 2. `CourseProgress`：组合一个 `Lesson` 对象，记录学习者完成的分钟数。
+3. `StudyGoal`：封装学习目标，保证完成分钟数不会超过目标分钟数。
 
 建议按以下顺序完成：
 
@@ -28,3 +29,4 @@ mvn -B -pl exercises/object-oriented/solution -am test
 2. 再在 `CourseProgress` 中保存学习者姓名与课时对象。
 3. 实现 `recordStudyMinutes`，并确保完成分钟数不会超过课时时长。
 4. 最后实现 `remainingMinutes`、`completionRate`、`isCompleted` 和固定格式 `summary`。
+5. 实现 `StudyGoal`，练习用业务方法维护对象不变量。

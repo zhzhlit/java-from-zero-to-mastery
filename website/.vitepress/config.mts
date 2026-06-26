@@ -84,6 +84,10 @@ export default defineConfig({
             text: '类与对象',
             link: '/zh-CN/guide/02-java-core/01-classes-and-objects'
           },
+          {
+            text: '封装',
+            link: '/zh-CN/guide/02-java-core/02-encapsulation'
+          },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -132,6 +136,10 @@ export default defineConfig({
             {
               text: '类与对象',
               link: '/zh-CN/guide/02-java-core/01-classes-and-objects'
+            },
+            {
+              text: '封装',
+              link: '/zh-CN/guide/02-java-core/02-encapsulation'
             }
           ]
         },
