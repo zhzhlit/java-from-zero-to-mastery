@@ -12,6 +12,7 @@
     <modules>
         <module>examples</module>
         <module>exercises</module>
+        <module>flagship-project</module>
     </modules>
 
     <properties>

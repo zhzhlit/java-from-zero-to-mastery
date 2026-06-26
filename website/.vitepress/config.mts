@@ -125,7 +125,7 @@ export default defineConfig({
             link: '/zh-CN/guide/02-java-core/11-enums-standard-library'
           },
           {
-            text: 'Java 核心阶段复盘',
+            text: 'Java 核心综合复盘',
             link: '/zh-CN/guide/02-java-core/12-java-core-review'
           },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
@@ -218,7 +218,7 @@ export default defineConfig({
               link: '/zh-CN/guide/02-java-core/11-enums-standard-library'
             },
             {
-              text: 'Java 核心阶段复盘',
+              text: 'Java 核心综合复盘',
               link: '/zh-CN/guide/02-java-core/12-java-core-review'
             }
           ]

@@ -55,6 +55,6 @@ v0.3.11 已发布以下连续学习内容：
 17. [日期与时间 API](../guide/02-java-core/09-date-time-api.md)
 18. [Lambda 与 Stream API](../guide/02-java-core/10-lambda-streams.md)
 19. [枚举与常用标准库](../guide/02-java-core/11-enums-standard-library.md)
-20. [Java 核心阶段复盘](../guide/02-java-core/12-java-core-review.md)
+20. [Java 核心综合复盘](../guide/02-java-core/12-java-core-review.md)
 
-Java 核心综合练习使用[面向对象练习](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/object-oriented)作为阶段收束，覆盖本阶段主要知识点，并提供 starter/solution 与自动化测试验证路径。
+Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。工程基础、数据库与 Web 仍处于后续版本规划中，尚未进入默认学习导航。

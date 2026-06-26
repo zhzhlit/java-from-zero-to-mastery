@@ -1,176 +1,167 @@
 ---
-title: Java 核心阶段复盘
+title: Java 核心综合复盘
 status: learning-ready
 javaVersion: "21"
 verifiedAt: "2026-06-26"
 ---
 
-# Java 核心阶段复盘
+# Java 核心综合复盘
 
 ## 学习目标
 
-- 把类、对象、封装、继承、多态、接口和异常串成一条建模主线。
-- 解释集合、泛型、文件 I/O、日期时间、Stream、枚举和常用标准库在业务代码中的位置。
-- 使用 `exercises/object-oriented` 完成一次 Java 核心阶段综合练习。
-- 能根据测试失败、异常信息和对象状态定位问题。
-- 为进入工程基础、数据库与 Web 阶段建立可验证的自学节奏。
+- 用一个小型业务项目串联 Java 核心阶段知识。
+- 识别类、集合、异常、文件、时间、Stream、枚举和测试在真实代码中的职责边界。
+- 使用 Maven 运行综合项目测试和命令行入口。
+- 按验收清单复盘自己是否能独立完成 Java 核心阶段任务。
+- 为后续工程基础、数据库、Web 和 Spring Boot 学习建立项目入口。
 
 ## 前置知识
 
-已完成[枚举与常用标准库](./11-enums-standard-library.md)，能够阅读 Java 21 示例、运行 Maven 测试，并理解 starter/solution 练习结构。
+已完成[枚举与常用标准库](./11-enums-standard-library.md)，能够阅读类协作、集合、异常、文件 I/O、日期时间、Stream、枚举、`Optional` 和 JUnit 断言。
 
-## 这一阶段真正训练了什么
+## 为什么需要综合复盘
 
-Java 核心不是把 API 背完，而是学会用类型和对象表达问题。完成本阶段后，你应该能回答三类问题：
+前面的章节按知识点拆开学习，每章都刻意保持小而清楚。真正写业务代码时，这些知识不会分开出现：一个课程管理程序可能同时需要课程对象、课时集合、学习进度、状态枚举、文件保存、时间记录和自动化测试。
 
-1. **这个业务概念应该由谁负责？**
-   例如课时、学习进度、学习目标、课程目录和任务看板分别保存什么状态，哪些规则应该放进对象内部。
+本章不急着引入新框架，而是先做一个 Java 核心阶段的收束：确认你能把已经学过的 API 组合成一个边界清楚、可运行、可测试的小项目。
 
-2. **代码如何保持可变化？**
-   继承、多态、接口、泛型和集合不是为了显得复杂，而是让不同学习资源、评审结果和任务处理逻辑可以在统一边界下扩展。
+## Java 核心能力地图
 
-3. **失败和边界如何被验证？**
-   构造器校验、业务异常、文件 I/O 异常、空查询、只读集合返回和排序统计，都应该通过测试固定下来。
+可以用下面的问题检查自己是否真的掌握了 Java 核心阶段：
 
-如果你只能看懂语法，但不能说明这些选择解决了什么问题，说明还需要通过综合练习再走一遍。
+| 能力 | 复盘问题 | 项目中的体现 |
+| --- | --- | --- |
+| 类与对象 | 哪些数据和行为应该放在同一个类里？ | `Course` 保存课程信息并计算总时长 |
+| 封装 | 外部代码能不能绕过业务方法改坏状态？ | 集合返回只读副本，进度只能通过方法记录 |
+| 继承与接口 | 当前问题是否真的需要继承层次？ | 本项目暂不引入继承，保留后续扩展空间 |
+| 异常 | 哪些输入应该立即拒绝？失败后状态是否安全？ | 课程编号、课时 ID、时间和重复课程都有校验 |
+| 集合与泛型 | 列表、集合、映射分别适合保存什么？ | `List` 保存课时顺序，`Set` 保存去重标签，`Map` 保存课程索引 |
+| 文件 I/O | 如何把内存状态保存到磁盘？ | `ProgressFileStore` 使用 `Properties` 保存学习进度 |
+| 日期时间 | 业务时间如何避免用字符串硬凑？ | `LocalDateTime` 保存开始和最后学习时间 |
+| Stream | 哪些查询适合声明式处理？ | 查找下一个未完成课时、按标签搜索课程 |
+| 枚举 | 固定选项如何进入类型系统？ | `CourseLevel` 表达课程阶段 |
+| JUnit | 哪些规则必须自动验证？ | 课程查询、进度记录、文件读写和命令行流程都有测试 |
 
-## 概念串联
+## 综合项目：命令行课程管理
 
-### 对象建模与不变量
+v0.3.11 新增主项目第一步：
 
-`Lesson`、`CourseProgress` 和 `StudyGoal` 训练的是对象的基本边界。字段不是随便摆放的数据；构造器和业务方法需要保护对象不变量。
-
-- 标题不能为空。
-- 学习时长必须为正数。
-- 完成分钟数不能超过目标或课时时长。
-- 对外摘要要稳定，便于测试和排查。
-
-这类规则越早放进对象内部，后续代码越少依赖“调用者一定传对”的运气。
-
-### 继承、多态与接口
-
-`LearningResource`、`VideoResource`、`ArticleResource` 展示的是继承和父类引用多态调用。`ReviewResult`、`QuizResult`、`CodeReviewResult` 展示的是接口和接口引用多态调用。
-
-继承适合表达“是一种”的层次关系。接口适合表达“具备某种能力”的调用边界。两者都应该让调用者面向稳定抽象编程，而不是到处判断具体类型。
-
-### 异常与失败边界
-
-`EnrollmentService` 和 `EnrollmentException` 训练的是可预期失败。报名满员不是程序崩溃，而是业务规则拒绝一次操作。
-
-好的异常处理至少要验证两件事：
-
-- 抛出的异常类型和消息能帮助调用者理解失败原因。
-- 失败后对象状态不被破坏，例如报名人数不应该增加。
-
-### 集合、泛型与只读返回
-
-`CourseCatalog`、`LearningQueue<T>` 和 `ReviewResultSelector` 把集合与泛型放到业务场景中：
-
-- `List` 保存课时顺序。
-- `Set` 去重标签。
-- `Map` 建立标签索引。
-- 泛型队列复用任务顺序处理逻辑。
-- 类型参数上界限制“只能选择评审结果”。
-
-集合返回值要谨慎。暴露内部可变集合，会让调用者绕过对象规则。优先返回只读视图或副本。
-
-### 文件 I/O 与时间
-
-`StudyReportFileStore` 训练 `Path`、`Files`、UTF-8 和 `IOException`。文件系统是外部世界，失败很常见：目录不存在、权限不足、文件内容为空，都应该在边界处处理或传播。
-
-`StudySchedule` 训练 `LocalDate`、`LocalTime`、`LocalDateTime` 和 `Duration`。时间代码要避免依赖当前系统时间，测试中优先使用固定日期时间。
-
-### Stream、枚举与常用标准库
-
-`StudyStreamAnalyzer` 训练筛选、转换、排序、统计和方法引用。Stream 适合表达数据流水线，但每一步都应该清楚：输入是什么，输出是什么。
-
-`StudyTaskStatus`、`StudyTaskPriority`、`StudyTask` 和 `StudyTaskBoard` 把枚举、`Optional`、`Objects`、`StringJoiner`、`Comparator` 和 `EnumMap` 放在同一个任务看板中。
-
-这些工具共同服务于一个目标：让固定选项、可能缺失、必填引用、摘要文本、排序规则和状态统计都有清晰表达。
-
-## 阶段综合练习
-
-本阶段综合练习是[面向对象练习](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/object-oriented)。它使用同一个课程学习业务背景，覆盖 Java 核心的主要能力。
-
-建议按四个检查点完成：
-
-1. **基础对象检查点**
-   完成 `Lesson`、`CourseProgress`、`StudyGoal`。重点检查构造器校验、状态更新和摘要格式。
-
-2. **抽象边界检查点**
-   完成学习资源、评审结果和报名服务。重点检查多态调用、接口默认方法、异常路径和失败后状态。
-
-3. **数据结构检查点**
-   完成课程目录、泛型队列、评审结果选择器。重点检查集合选择、只读返回、泛型约束和空数据。
-
-4. **工程常用 API 检查点**
-   完成报告文件、学习日程、Stream 分析和任务看板。重点检查外部 I/O、固定时间、排序统计、枚举状态和 `Optional` 查询。
-
-验证 starter 可以编译：
-
-```bash
-mvn -B -pl exercises/object-oriented/starter -am compile
+```text
+flagship-project/course-manager-cli
 ```
 
-验证参考答案：
+它不是完整社区系统，而是“在线学习与知识社区”主项目的最小业务闭环：
+
+- 管理示例课程与课时。
+- 支持按课程编号和标签查询。
+- 记录某门课程已经完成的课时。
+- 将学习进度保存到本地 `properties` 文件。
+- 提供 JUnit 测试验证核心业务规则。
+- 提供一个可运行的命令行入口。
+
+本阶段刻意不引入 Web、数据库、登录、权限或前端页面。先把 Java 核心建模能力练扎实，后续再迁移到 Spring Boot 和数据库。
+
+## 代码结构
+
+- [`CourseLevel`](https://github.com/zhzhlit/java-from-zero-to-mastery/blob/main/flagship-project/course-manager-cli/src/main/java/io/github/javamastery/flagship/cli/CourseLevel.java)：用枚举表达课程阶段。
+- [`Lesson`](https://github.com/zhzhlit/java-from-zero-to-mastery/blob/main/flagship-project/course-manager-cli/src/main/java/io/github/javamastery/flagship/cli/Lesson.java)：保存课时编号、标题和时长。
+- [`Course`](https://github.com/zhzhlit/java-from-zero-to-mastery/blob/main/flagship-project/course-manager-cli/src/main/java/io/github/javamastery/flagship/cli/Course.java)：组合课时和标签，计算课程总时长。
+- [`CourseCatalog`](https://github.com/zhzhlit/java-from-zero-to-mastery/blob/main/flagship-project/course-manager-cli/src/main/java/io/github/javamastery/flagship/cli/CourseCatalog.java)：管理课程索引、查询、排序和按阶段分组。
+- [`StudyProgress`](https://github.com/zhzhlit/java-from-zero-to-mastery/blob/main/flagship-project/course-manager-cli/src/main/java/io/github/javamastery/flagship/cli/StudyProgress.java)：记录完成课时、完成百分比和摘要文本。
+- [`ProgressFileStore`](https://github.com/zhzhlit/java-from-zero-to-mastery/blob/main/flagship-project/course-manager-cli/src/main/java/io/github/javamastery/flagship/cli/ProgressFileStore.java)：用标准库 `Properties` 保存和读取进度文件。
+- [`CourseManagerApp`](https://github.com/zhzhlit/java-from-zero-to-mastery/blob/main/flagship-project/course-manager-cli/src/main/java/io/github/javamastery/flagship/cli/CourseManagerApp.java)：提供命令行运行入口。
+- [`course-manager-cli` 测试](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/flagship-project/course-manager-cli/src/test/java/io/github/javamastery/flagship/cli)：覆盖查询、进度、文件存储和命令行流程。
+
+## 运行与测试
+
+从仓库根目录运行测试：
 
 ```bash
-mvn -B -pl exercises/object-oriented/solution -am test
+mvn -B -pl flagship-project/course-manager-cli -am test
 ```
 
-验证 Java 核心示例：
+运行命令行示例：
 
 ```bash
-mvn -B -pl examples/java-core -am test
+java -cp flagship-project/course-manager-cli/target/classes io.github.javamastery.flagship.cli.CourseManagerApp
 ```
 
-## 自查清单
+也可以指定进度文件路径：
 
-完成练习后，不要只看测试是否通过。再用这份清单确认自己理解了设计意图：
+```bash
+java -cp flagship-project/course-manager-cli/target/classes io.github.javamastery.flagship.cli.CourseManagerApp target/my-progress.properties
+```
 
-- 我能说出每个类维护的状态和不变量。
-- 我能说明哪些校验放在构造器，哪些放在业务方法。
-- 我能解释为什么某处用继承，某处用接口。
-- 我能写出至少一个异常路径测试，并确认失败后状态不变。
-- 我能说明 `List`、`Set`、`Map` 在课程目录中的不同职责。
-- 我能解释泛型类型参数如何减少重复代码。
-- 我能说明文件 I/O 代码为什么需要处理 `IOException`。
-- 我能用固定日期时间测试时间计算。
-- 我能读懂一个 Stream 流水线每一步的数据变化。
-- 我能说明枚举相比字符串状态的优势。
-- 我能解释 `Optional` 返回值、只读集合返回和 `Comparator` 排序规则。
+第一次运行会完成第一节课并保存进度，输出类似：
 
-## 常见卡点
+```text
+课程数量: 2
+总时长: 300 分钟
+当前进度: Java 核心综合复盘 | 1/3 | 33% | last 2026-06-26 10:30
+进度文件: target/course-manager-progress.properties
+```
 
-- **只补到测试通过，但不知道为什么这样设计**：回到对应章节，重新解释类职责和调用边界。
-- **把所有逻辑写进一个大方法**：先找名词和动作，把状态与规则移动到对应对象。
-- **异常测试只断言抛出类型**：同时断言消息和失败后的对象状态。
-- **集合测试依赖无承诺顺序**：只有 `List` 或明确排序后的结果才承诺顺序。
-- **Stream 写得太长**：把复杂谓词或映射提取成有名字的方法。
-- **`Optional.get()` 随手调用**：先处理不存在的情况，再取值。
-- **文件和时间测试不稳定**：使用 `@TempDir` 和固定 `LocalDateTime`。
+再次运行同一个进度文件，会继续完成下一节课。
+
+## 复盘任务
+
+按下面顺序阅读和修改代码：
+
+1. 先读 `SampleCourses`，确认示例数据有哪些课程、标签和课时。
+2. 阅读 `Lesson` 和 `Course`，找出所有输入校验。
+3. 阅读 `CourseCatalog`，说明为什么课程编号用 `Map` 查询，标签用 `Set` 去重。
+4. 阅读 `StudyProgress`，解释为什么完成课时不能直接暴露可变集合。
+5. 阅读 `ProgressFileStore`，说明 `Properties` 文件里保存了哪些字段。
+6. 运行测试，选择一个测试方法，故意改坏代码并观察失败信息，再恢复。
+7. 运行命令行入口两次，查看进度文件变化。
+
+## 验收清单
+
+完成本章后，你应该能够做到：
+
+- 解释每个类负责什么，不把文件读写、业务规则和命令行输出混在一个方法里。
+- 为新增字段补齐构造器校验和对应测试。
+- 判断何时用 `List`、`Set`、`Map`、`Optional` 和 `enum`。
+- 使用 `@TempDir` 测试真实文件读写，且不污染项目目录。
+- 使用 Maven 精确验证一个模块，而不是只依赖 IDE 的绿色标记。
+- 说明为什么本阶段不引入数据库和 Web 框架。
+
+## 常见错误与调试提示
+
+- 直接返回内部可变集合：外部代码可能绕过业务方法修改状态。
+- 把进度保存写进 `StudyProgress`：这会让业务对象依赖文件系统，不利于测试。
+- 用字符串保存课程阶段：固定选项优先考虑枚举。
+- 用 `null` 表示找不到课程：查询结果更适合返回 `Optional<Course>`。
+- 文件测试直接写项目目录：优先使用 JUnit `@TempDir`。
+- 跳过 Maven 测试只运行 `main`：命令行输出正确不代表业务边界都正确。
+
+调试时先从失败测试入手：看输入、预期规则、实际状态，再决定是实现错了还是测试写错了。
+
+## 分级练习
+
+- **基础**：为 `CourseCatalog.coursesByLevel` 增加测试，确认每个阶段都存在分组。
+- **进阶**：为 `StudyProgress` 增加 `nextLesson(Course course)`，返回下一节未完成课时。
+- **挑战**：扩展命令行入口，支持 `list`、`progress`、`complete <lessonId>` 三个命令，并保持核心业务逻辑可测试。
 
 ## 面试与复习题
 
-1. 什么是对象不变量？为什么构造器校验很重要？
-2. 继承和接口分别适合表达什么关系？
-3. 多态调用如何减少 `if/else` 或 `switch`？
-4. 为什么业务异常测试要验证失败后状态？
-5. `List`、`Set`、`Map` 的选择会如何影响业务语义？
-6. 泛型类和泛型方法分别解决什么重复问题？
-7. 什么时候应该返回只读集合？
-8. 文件 I/O 为什么属于边界代码？
-9. 为什么时间测试要避免依赖当前系统时间？
-10. Stream 什么时候更清楚，什么时候普通循环更合适？
-11. 枚举、`Optional`、`Objects`、`Comparator` 和 `EnumMap` 分别解决什么小问题？
-12. 如果要把本阶段代码迁移到 Web 服务，你会保留哪些模型边界？
+1. 为什么综合项目里不应该把所有代码都写进 `main` 方法？
+2. `List`、`Set` 和 `Map` 在课程管理场景中分别解决什么问题？
+3. 返回只读集合能防止哪类封装问题？
+4. `Optional<Course>` 相比返回 `null` 有什么优势？
+5. `Properties` 适合本阶段的原因是什么？它不适合解决什么问题？
+6. 文件读写测试为什么应该使用 `@TempDir`？
+7. 如果后续要接入数据库，哪些类最可能保持不变？
+8. 这个命令行项目迁移到 Spring Boot 时，哪些对象会变成 Controller、Service 或 Repository 附近的角色？
 
 ## 本章总结
 
-Java 核心阶段的重点是用类型、对象和测试建立可靠边界。语法和 API 是工具，真正的能力是把业务规则放到合适的位置，让成功路径、失败路径、数据结构和外部边界都能被解释、运行和验证。
+Java 核心阶段的关键不是背完 API 名称，而是能把类型、集合、异常、文件、时间、枚举和测试组合成边界清楚的小系统。命令行课程管理项目就是这个阶段的验收物：它足够小，可以逐行读懂；也足够完整，可以承接后续工程化和企业级开发。
 
 ## 下一步
 
 上一章：[枚举与常用标准库](./11-enums-standard-library.md)
 
-完成综合练习后，继续进入[学习路线](../../roadmap/index.md)中的计算机与工程基础阶段。
+继续查看：[学习路线](../../roadmap/index.md)
+
+查看主项目后续演进：[在线学习与知识社区主项目路线](../../projects/flagship-roadmap.md)
