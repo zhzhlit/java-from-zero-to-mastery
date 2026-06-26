@@ -257,4 +257,6 @@ Lambda 让行为可以作为参数传递，Stream 让集合处理可以写成清
 
 上一章：[日期与时间 API](./09-date-time-api.md)
 
+下一章：[枚举与常用标准库](./11-enums-standard-library.md)
+
 继续查看：[学习路线](../../roadmap/index.md)
