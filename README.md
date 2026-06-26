@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.3.5。已经提供从第一个程序到集合的连续学习路线，以及成绩统计器、课程进度、学习目标、学习资源、评审结果、课程报名与课程目录 starter/solution 练习。
+> 当前学习版本：v0.3.6。已经提供从第一个程序到泛型的连续学习路线，以及成绩统计器、课程进度、学习目标、学习资源、评审结果、课程报名、课程目录与泛型队列 starter/solution 练习。
 
 ## 三条学习主线
 
@@ -81,6 +81,7 @@ npm run docs:build --prefix website
 - [接口](docs/zh-CN/guide/02-java-core/04-interfaces.md)
 - [异常处理](docs/zh-CN/guide/02-java-core/05-exceptions.md)
 - [集合](docs/zh-CN/guide/02-java-core/06-collections.md)
+- [泛型](docs/zh-CN/guide/02-java-core/07-generics.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)

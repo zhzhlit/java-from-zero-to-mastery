@@ -7,7 +7,7 @@
     <parent>
         <groupId>io.github.javamastery</groupId>
         <artifactId>exercises</artifactId>
-        <version>0.3.5-SNAPSHOT</version>
+        <version>0.3.6-SNAPSHOT</version>
     </parent>
 
     <artifactId>object-oriented-exercises</artifactId>
