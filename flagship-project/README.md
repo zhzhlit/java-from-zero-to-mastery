@@ -4,6 +4,19 @@
 
 完整路线见：[在线学习与知识社区主项目路线](../docs/zh-CN/projects/flagship-roadmap.md)。
 
+## v0.4.0 验证入口
+
+v0.4.0 不扩展主项目业务功能，重点是把命令行课程管理作为工程化验证样例。学习者应能够运行模块级测试、全仓验证、文档链接检查和文档构建，并理解这些命令与 CI 的关系。
+
+推荐验证命令：
+
+```bash
+mvn -B -pl flagship-project/course-manager-cli -am test
+mvn -B verify
+npm run check:links --prefix website
+npm run docs:build --prefix website
+```
+
 ## v0.3.11 范围
 
 v0.3.11 提供第一步可运行实现：
