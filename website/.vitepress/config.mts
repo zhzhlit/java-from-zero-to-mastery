@@ -108,6 +108,10 @@ export default defineConfig({
             text: '泛型',
             link: '/zh-CN/guide/02-java-core/07-generics'
           },
+          {
+            text: '文件 I/O',
+            link: '/zh-CN/guide/02-java-core/08-file-io'
+          },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -180,6 +184,10 @@ export default defineConfig({
             {
               text: '泛型',
               link: '/zh-CN/guide/02-java-core/07-generics'
+            },
+            {
+              text: '文件 I/O',
+              link: '/zh-CN/guide/02-java-core/08-file-io'
             }
           ]
         },
