@@ -205,4 +205,6 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 上一章：[封装](./02-encapsulation.md)
 
+下一章：[接口](./04-interfaces.md)
+
 继续查看：[学习路线](../../roadmap/index.md)
