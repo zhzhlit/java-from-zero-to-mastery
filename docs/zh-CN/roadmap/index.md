@@ -34,7 +34,7 @@ verifiedAt: "2026-06-26"
 
 ## 当前可学习内容
 
-v0.3.7 已发布以下连续学习内容：
+v0.3.8 已发布以下连续学习内容：
 
 1. [第一个 Java 程序](../guide/01-getting-started/01-first-java-program.md)
 2. [开发环境与 IntelliJ IDEA](../guide/01-getting-started/02-development-environment-and-idea.md)
@@ -52,5 +52,6 @@ v0.3.7 已发布以下连续学习内容：
 14. [集合](../guide/02-java-core/06-collections.md)
 15. [泛型](../guide/02-java-core/07-generics.md)
 16. [文件 I/O](../guide/02-java-core/08-file-io.md)
+17. [日期与时间 API](../guide/02-java-core/09-date-time-api.md)
 
-时间 API、Stream 和常用标准库综合练习仍处于后续版本规划中，尚未进入默认学习导航。
+Stream、枚举和常用标准库综合练习仍处于后续版本规划中，尚未进入默认学习导航。
