@@ -239,4 +239,6 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 上一章：[文件 I/O](./08-file-io.md)
 
+下一章：[Lambda 与 Stream API](./10-lambda-streams.md)
+
 继续查看：[学习路线](../../roadmap/index.md)

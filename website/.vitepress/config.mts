@@ -116,6 +116,10 @@ export default defineConfig({
             text: '日期与时间 API',
             link: '/zh-CN/guide/02-java-core/09-date-time-api'
           },
+          {
+            text: 'Lambda 与 Stream API',
+            link: '/zh-CN/guide/02-java-core/10-lambda-streams'
+          },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -196,6 +200,10 @@ export default defineConfig({
             {
               text: '日期与时间 API',
               link: '/zh-CN/guide/02-java-core/09-date-time-api'
+            },
+            {
+              text: 'Lambda 与 Stream API',
+              link: '/zh-CN/guide/02-java-core/10-lambda-streams'
             }
           ]
         },
