@@ -4,16 +4,33 @@
 
 完整路线见：[在线学习与知识社区主项目路线](../docs/zh-CN/projects/flagship-roadmap.md)。
 
-## v0.1 范围
+## v0.3.11 范围
 
-v0.1 只包含文档路线，不包含业务实现。
+v0.3.11 提供第一步可运行实现：
 
-因此，当前目录暂不提供：
+```text
+flagship-project/course-manager-cli
+```
 
-- 可运行应用代码
+它使用 Java 21、Maven 和 JUnit 5 实现命令行课程管理的最小业务闭环：
+
+- 示例课程与课时建模。
+- 课程编号查询、标签查询和阶段分组。
+- 学习进度记录和完成百分比。
+- 本地 `properties` 文件保存与读取。
+- 命令行入口与自动化测试。
+
+从仓库根目录验证：
+
+```bash
+mvn -B -pl flagship-project/course-manager-cli -am test
+java -cp flagship-project/course-manager-cli/target/classes io.github.javamastery.flagship.cli.CourseManagerApp
+```
+
+当前仍暂不提供：
+
 - 数据库脚本
 - 前端页面
 - Docker 或 Kubernetes 部署文件
-- 业务测试用例
 
-后续版本应按路线图逐阶段补充实现，并在每个阶段提供独立的运行说明、测试命令和验收标准。
+后续版本应按路线图逐阶段补充数据库、Web、前端和部署实现，并在每个阶段提供独立的运行说明、测试命令和验收标准。

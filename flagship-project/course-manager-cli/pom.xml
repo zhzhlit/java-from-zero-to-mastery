@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.github.javamastery</groupId>
-        <artifactId>java-basics-exercises</artifactId>
+        <artifactId>flagship-project</artifactId>
         <version>0.3.11-SNAPSHOT</version>
     </parent>
-    <artifactId>java-basics-solution</artifactId>
+    <artifactId>course-manager-cli</artifactId>
 
     <dependencies>
         <dependency>
