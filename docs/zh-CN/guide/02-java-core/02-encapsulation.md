@@ -186,4 +186,6 @@ mvn -B -pl exercises/object-oriented/solution -am test
 
 上一章：[类与对象](./01-classes-and-objects.md)
 
+下一章：[继承与多态](./03-inheritance-and-polymorphism.md)
+
 继续查看：[学习路线](../../roadmap/index.md)

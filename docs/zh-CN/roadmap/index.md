@@ -34,7 +34,7 @@ verifiedAt: "2026-06-26"
 
 ## 当前可学习内容
 
-v0.3.1 已发布以下连续学习内容：
+v0.3.2 已发布以下连续学习内容：
 
 1. [第一个 Java 程序](../guide/01-getting-started/01-first-java-program.md)
 2. [开发环境与 IntelliJ IDEA](../guide/01-getting-started/02-development-environment-and-idea.md)
@@ -46,5 +46,6 @@ v0.3.1 已发布以下连续学习内容：
 8. [IntelliJ IDEA 调试](../guide/01-getting-started/08-debugging-with-intellij-idea.md)
 9. [类与对象](../guide/02-java-core/01-classes-and-objects.md)
 10. [封装](../guide/02-java-core/02-encapsulation.md)
+11. [继承与多态](../guide/02-java-core/03-inheritance-and-polymorphism.md)
 
-继承、多态、接口、异常和集合仍处于后续版本规划中，尚未进入默认学习导航。
+接口、异常和集合仍处于后续版本规划中，尚未进入默认学习导航。
