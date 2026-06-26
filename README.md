@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.2.2。已经提供从第一个程序到数组、字符串与调试的连续入门路线，以及成绩统计器 starter/solution 练习。
+> 当前学习版本：v0.3.0。已经提供从第一个程序到类与对象的连续学习路线，以及成绩统计器、课程进度 starter/solution 练习。
 
 ## 三条学习主线
 
@@ -42,6 +42,14 @@ mvn -B -pl exercises/java-basics/starter -am compile
 mvn -B -pl exercises/java-basics/solution -am test
 ```
 
+验证 Java 核心示例与面向对象练习：
+
+```bash
+mvn -B -pl examples/java-core -am test
+mvn -B -pl exercises/object-oriented/starter -am compile
+mvn -B -pl exercises/object-oriented/solution -am test
+```
+
 启动文档站：
 
 ```bash
@@ -67,7 +75,9 @@ npm run docs:build --prefix website
 - [数组](docs/zh-CN/guide/01-getting-started/06-arrays.md)
 - [字符串与 StringBuilder](docs/zh-CN/guide/01-getting-started/07-strings-and-stringbuilder.md)
 - [IntelliJ IDEA 调试](docs/zh-CN/guide/01-getting-started/08-debugging-with-intellij-idea.md)
+- [类与对象](docs/zh-CN/guide/02-java-core/01-classes-and-objects.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
+- [面向对象练习](exercises/object-oriented/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)
 - [贡献指南](CONTRIBUTING.md)

@@ -187,6 +187,8 @@ if (name.equals(target)) {
 
 上一章：[字符串与 StringBuilder](./07-strings-and-stringbuilder.md)
 
+下一章：[类与对象](../02-java-core/01-classes-and-objects.md)
+
 综合练习：[成绩统计器](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/java-basics)
 
 继续查看：[学习路线](../../roadmap/index.md)

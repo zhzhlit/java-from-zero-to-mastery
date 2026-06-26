@@ -1,7 +1,7 @@
 ---
 status: learning-ready
 javaVersion: "21"
-verifiedAt: "2026-06-25"
+verifiedAt: "2026-06-26"
 ---
 
 # Java 学习路线图
@@ -34,7 +34,7 @@ verifiedAt: "2026-06-25"
 
 ## 当前可学习内容
 
-v0.2.2 已发布以下连续入门路线：
+v0.3.0 已发布以下连续学习内容：
 
 1. [第一个 Java 程序](../guide/01-getting-started/01-first-java-program.md)
 2. [开发环境与 IntelliJ IDEA](../guide/01-getting-started/02-development-environment-and-idea.md)
@@ -44,5 +44,6 @@ v0.2.2 已发布以下连续入门路线：
 6. [数组](../guide/01-getting-started/06-arrays.md)
 7. [字符串与 StringBuilder](../guide/01-getting-started/07-strings-and-stringbuilder.md)
 8. [IntelliJ IDEA 调试](../guide/01-getting-started/08-debugging-with-intellij-idea.md)
+9. [类与对象](../guide/02-java-core/01-classes-and-objects.md)
 
-面向对象、异常和集合仍处于后续版本规划中，尚未进入默认学习导航。
+异常和集合仍处于后续版本规划中，尚未进入默认学习导航。
