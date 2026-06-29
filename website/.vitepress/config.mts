@@ -132,6 +132,10 @@ export default defineConfig({
             text: '测试、Maven 与工程化验证',
             link: '/zh-CN/guide/03-engineering-foundation/01-testing-maven-ci'
           },
+          {
+            text: 'JUnit 5 专项练习',
+            link: '/zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics'
+          },
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: '面试与复习', link: '/zh-CN/interview/README' }
         ]
@@ -228,6 +232,10 @@ export default defineConfig({
             {
               text: '测试、Maven 与工程化验证',
               link: '/zh-CN/guide/03-engineering-foundation/01-testing-maven-ci'
+            },
+            {
+              text: 'JUnit 5 专项练习',
+              link: '/zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics'
             }
           ]
         },

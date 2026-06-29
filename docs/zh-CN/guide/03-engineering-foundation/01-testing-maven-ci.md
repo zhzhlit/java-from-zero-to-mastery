@@ -203,4 +203,4 @@ mvn -B -pl flagship-project/course-manager-cli -am test
 
 上一章：[Java 核心综合复盘](../02-java-core/12-java-core-review.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入计算机与工程基础阶段。
+下一章：[JUnit 5 专项练习](./02-junit5-testing-basics.md)
