@@ -46,7 +46,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '学习路线', link: '/zh-CN/roadmap/' },
       {
-        text: '学习资源',
+        text: 'Java 入门',
         items: [
           {
             text: '第一个 Java 程序',
@@ -79,7 +79,12 @@ export default defineConfig({
           {
             text: 'IntelliJ IDEA 调试',
             link: '/zh-CN/guide/01-getting-started/08-debugging-with-intellij-idea'
-          },
+          }
+        ]
+      },
+      {
+        text: 'Java 核心',
+        items: [
           {
             text: '类与对象',
             link: '/zh-CN/guide/02-java-core/01-classes-and-objects'
@@ -127,7 +132,12 @@ export default defineConfig({
           {
             text: 'Java 核心综合复盘',
             link: '/zh-CN/guide/02-java-core/12-java-core-review'
-          },
+          }
+        ]
+      },
+      {
+        text: '工程基础',
+        items: [
           {
             text: '测试、Maven 与工程化验证',
             link: '/zh-CN/guide/03-engineering-foundation/01-testing-maven-ci'
@@ -135,20 +145,39 @@ export default defineConfig({
           {
             text: 'JUnit 5 专项练习',
             link: '/zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics'
-          },
-          { text: 'Java 手册', link: '/zh-CN/handbook/README' },
-          { text: '面试与复习', link: '/zh-CN/interview/README' }
+          }
         ]
       },
-      { text: '写作规范', link: '/zh-CN/writing-guide' },
+      {
+        text: '练习与项目',
+        items: [
+          { text: 'Java 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/java-basics' },
+          { text: '面向对象练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/object-oriented' },
+          { text: 'JUnit 5 专项练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/testing-basics' },
+          { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
+        ]
+      },
+      {
+        text: '参考资料',
+        items: [
+          { text: 'Java 手册', link: '/zh-CN/handbook/README' },
+          { text: '面试与复习', link: '/zh-CN/interview/README' },
+          { text: '写作规范', link: '/zh-CN/writing-guide' }
+        ]
+      },
       { text: 'English', link: '/en/' }
     ],
     sidebar: {
       '/zh-CN/': [
         {
-          text: '开始学习',
+          text: '总览',
           items: [
-            { text: '学习路线', link: '/zh-CN/roadmap/' },
+            { text: '学习路线', link: '/zh-CN/roadmap/' }
+          ]
+        },
+        {
+          text: 'Java 入门',
+          items: [
             {
               text: '第一个 Java 程序',
               link: '/zh-CN/guide/01-getting-started/01-first-java-program'
@@ -180,7 +209,12 @@ export default defineConfig({
             {
               text: 'IntelliJ IDEA 调试',
               link: '/zh-CN/guide/01-getting-started/08-debugging-with-intellij-idea'
-            },
+            }
+          ]
+        },
+        {
+          text: 'Java 核心',
+          items: [
             {
               text: '类与对象',
               link: '/zh-CN/guide/02-java-core/01-classes-and-objects'
@@ -228,7 +262,12 @@ export default defineConfig({
             {
               text: 'Java 核心综合复盘',
               link: '/zh-CN/guide/02-java-core/12-java-core-review'
-            },
+            }
+          ]
+        },
+        {
+          text: '工程基础',
+          items: [
             {
               text: '测试、Maven 与工程化验证',
               link: '/zh-CN/guide/03-engineering-foundation/01-testing-maven-ci'
@@ -237,6 +276,12 @@ export default defineConfig({
               text: 'JUnit 5 专项练习',
               link: '/zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics'
             }
+          ]
+        },
+        {
+          text: '项目与练习',
+          items: [
+            { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
           ]
         },
         {
