@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.github.javamastery</groupId>
         <artifactId>data-structures-basics-exercises</artifactId>
-        <version>0.4.2-SNAPSHOT</version>
+        <version>0.4.3-SNAPSHOT</version>
     </parent>
     <artifactId>data-structures-basics-starter</artifactId>
 
