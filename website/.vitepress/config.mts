@@ -145,6 +145,10 @@ export default defineConfig({
           {
             text: 'JUnit 5 专项练习',
             link: '/zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics'
+          },
+          {
+            text: '数据结构基础',
+            link: '/zh-CN/guide/03-engineering-foundation/03-data-structures-basics'
           }
         ]
       },
@@ -154,6 +158,7 @@ export default defineConfig({
           { text: 'Java 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/java-basics' },
           { text: '面向对象练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/object-oriented' },
           { text: 'JUnit 5 专项练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/testing-basics' },
+          { text: '数据结构基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/data-structures-basics' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -275,6 +280,10 @@ export default defineConfig({
             {
               text: 'JUnit 5 专项练习',
               link: '/zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics'
+            },
+            {
+              text: '数据结构基础',
+              link: '/zh-CN/guide/03-engineering-foundation/03-data-structures-basics'
             }
           ]
         },

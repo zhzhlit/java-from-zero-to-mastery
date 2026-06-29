@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics
+      link: /zh-CN/guide/03-engineering-foundation/03-data-structures-basics
 
 features:
   - title: 学习路线
@@ -24,8 +24,8 @@ features:
     details: 学习面向对象、异常、集合、泛型、I/O、时间、Stream 和标准库。
     link: /zh-CN/guide/02-java-core/01-classes-and-objects
   - title: 工程基础
-    details: 建立测试、Maven、CI、JUnit 5 和后续数据结构算法基础。
-    link: /zh-CN/guide/03-engineering-foundation/01-testing-maven-ci
+    details: 建立测试、Maven、CI、JUnit 5、数据结构和后续算法基础。
+    link: /zh-CN/guide/03-engineering-foundation/03-data-structures-basics
   - title: 练习模块
     details: 通过 starter/solution 双模块完成基础、面向对象和 JUnit 5 专项练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises

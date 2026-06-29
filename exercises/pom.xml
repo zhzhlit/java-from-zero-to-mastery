@@ -7,7 +7,7 @@
     <parent>
         <groupId>io.github.javamastery</groupId>
         <artifactId>java-from-zero-to-mastery</artifactId>
-        <version>0.4.1-SNAPSHOT</version>
+        <version>0.4.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>exercises</artifactId>
@@ -18,5 +18,6 @@
         <module>java-basics</module>
         <module>object-oriented</module>
         <module>testing-basics</module>
+        <module>data-structures-basics</module>
     </modules>
 </project>
