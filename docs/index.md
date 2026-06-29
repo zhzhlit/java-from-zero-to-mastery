@@ -4,23 +4,32 @@ layout: home
 hero:
   name: Java 从零到精通
   text: 以 Java 21 为基线的系统化学习项目
-  tagline: 从可运行的第一课开始，循序建立 Java 与工程实践能力。
+  tagline: 从第一课到工程实践，用课程、练习和主项目连成一条可验证的 Java 学习路线。
   actions:
     - theme: brand
       text: 查看学习路线
       link: /zh-CN/roadmap/
     - theme: alt
-      text: 开始第一课
-      link: /zh-CN/guide/01-getting-started/01-first-java-program
+      text: 进入当前阶段
+      link: /zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics
 
 features:
   - title: 学习路线
-    details: 了解阶段目标、内容状态和推荐学习顺序。
+    details: 查看十阶段路线、当前可学习章节和后续主题安排。
     link: /zh-CN/roadmap/
-  - title: 第一课
-    details: 编译、测试并运行第一个 Java 21 程序。
+  - title: Java 入门
+    details: 从环境、变量、流程控制、方法、数组、字符串到调试。
     link: /zh-CN/guide/01-getting-started/01-first-java-program
-  - title: 写作规范
-    details: 查看课程内容的结构、状态与验证要求。
-    link: /zh-CN/writing-guide
+  - title: Java 核心
+    details: 学习面向对象、异常、集合、泛型、I/O、时间、Stream 和标准库。
+    link: /zh-CN/guide/02-java-core/01-classes-and-objects
+  - title: 工程基础
+    details: 建立测试、Maven、CI、JUnit 5 和后续数据结构算法基础。
+    link: /zh-CN/guide/03-engineering-foundation/01-testing-maven-ci
+  - title: 练习模块
+    details: 通过 starter/solution 双模块完成基础、面向对象和 JUnit 5 专项练习。
+    link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
+  - title: 主项目
+    details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
+    link: /zh-CN/projects/flagship-roadmap
 ---
