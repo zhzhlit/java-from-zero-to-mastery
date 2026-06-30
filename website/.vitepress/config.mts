@@ -182,6 +182,10 @@ export default defineConfig({
           {
             text: 'Servlet 基础',
             link: '/zh-CN/guide/04-database-web/04-servlet-basics'
+          },
+          {
+            text: 'Web 基础综合复盘',
+            link: '/zh-CN/guide/04-database-web/05-web-basics-review'
           }
         ]
       },
@@ -199,6 +203,7 @@ export default defineConfig({
           { text: 'JDBC 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/jdbc-basics' },
           { text: 'HTTP 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/http-basics' },
           { text: 'Servlet 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/servlet-basics' },
+          { text: 'Web 基础综合练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/web-basics-review' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -357,6 +362,10 @@ export default defineConfig({
             {
               text: 'Servlet 基础',
               link: '/zh-CN/guide/04-database-web/04-servlet-basics'
+            },
+            {
+              text: 'Web 基础综合复盘',
+              link: '/zh-CN/guide/04-database-web/05-web-basics-review'
             }
           ]
         },
