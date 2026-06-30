@@ -190,6 +190,15 @@ export default defineConfig({
         ]
       },
       {
+        text: '企业级开发',
+        items: [
+          {
+            text: 'Spring Boot 基础',
+            link: '/zh-CN/guide/05-enterprise-development/01-spring-boot-basics'
+          }
+        ]
+      },
+      {
         text: '练习与项目',
         items: [
           { text: 'Java 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/java-basics' },
@@ -204,6 +213,7 @@ export default defineConfig({
           { text: 'HTTP 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/http-basics' },
           { text: 'Servlet 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/servlet-basics' },
           { text: 'Web 基础综合练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/web-basics-review' },
+          { text: 'Spring Boot 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-basics' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -366,6 +376,15 @@ export default defineConfig({
             {
               text: 'Web 基础综合复盘',
               link: '/zh-CN/guide/04-database-web/05-web-basics-review'
+            }
+          ]
+        },
+        {
+          text: '企业级开发',
+          items: [
+            {
+              text: 'Spring Boot 基础',
+              link: '/zh-CN/guide/05-enterprise-development/01-spring-boot-basics'
             }
           ]
         },
