@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/04-database-web/04-servlet-basics
+      link: /zh-CN/guide/04-database-web/05-web-basics-review
 
 features:
   - title: 学习路线
@@ -27,10 +27,10 @@ features:
     details: 建立测试、Maven、CI、JUnit 5、数据结构、算法、网络和操作系统基础。
     link: /zh-CN/guide/03-engineering-foundation/06-operating-system-basics
   - title: 数据库与 Web
-    details: 从表结构、SQL、JDBC、HTTP、Servlet 分派和过滤器链开始进入后端 Web。
-    link: /zh-CN/guide/04-database-web/04-servlet-basics
+    details: 从表结构、SQL、JDBC、HTTP、Servlet 和综合 Web API 练习开始进入后端开发。
+    link: /zh-CN/guide/04-database-web/05-web-basics-review
   - title: 练习模块
-    details: 通过 starter/solution 双模块完成基础、面向对象、JUnit 5、数据结构、算法、网络、操作系统、数据库、JDBC、HTTP 和 Servlet 练习。
+    details: 通过 starter/solution 双模块完成基础、面向对象、JUnit 5、数据结构、算法、网络、操作系统、数据库、JDBC、HTTP、Servlet 和 Web 综合练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。

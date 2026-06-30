@@ -34,7 +34,7 @@ verifiedAt: "2026-06-26"
 
 ## 当前可学习内容
 
-v0.4.9 已发布以下连续学习内容：
+v0.4.10 已发布以下连续学习内容：
 
 1. [第一个 Java 程序](../guide/01-getting-started/01-first-java-program.md)
 2. [开发环境与 IntelliJ IDEA](../guide/01-getting-started/02-development-environment-and-idea.md)
@@ -66,5 +66,6 @@ v0.4.9 已发布以下连续学习内容：
 28. [JDBC 基础](../guide/04-database-web/02-jdbc-basics.md)
 29. [HTTP 基础](../guide/04-database-web/03-http-basics.md)
 30. [Servlet 基础](../guide/04-database-web/04-servlet-basics.md)
+31. [Web 基础综合复盘](../guide/04-database-web/05-web-basics-review.md)
 
-Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。计算机与工程基础已覆盖测试、Maven、CI 验证、JUnit 5 专项练习、数据结构基础、算法入门、网络基础和操作系统基础；数据库与 Web 已覆盖数据库基础、JDBC 基础、HTTP 基础和 Servlet 基础，Web 基础综合练习仍处于后续版本规划中。
+Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。计算机与工程基础已覆盖测试、Maven、CI 验证、JUnit 5 专项练习、数据结构基础、算法入门、网络基础和操作系统基础；数据库与 Web 已覆盖数据库基础、JDBC 基础、HTTP 基础、Servlet 基础和 Web 基础综合复盘；Spring Boot 基础仍处于后续版本规划中。
