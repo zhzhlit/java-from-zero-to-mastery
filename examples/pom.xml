@@ -7,7 +7,7 @@
     <parent>
         <groupId>io.github.javamastery</groupId>
         <artifactId>java-from-zero-to-mastery</artifactId>
-        <version>0.4.6-SNAPSHOT</version>
+        <version>0.4.7-SNAPSHOT</version>
     </parent>
 
     <artifactId>examples</artifactId>
