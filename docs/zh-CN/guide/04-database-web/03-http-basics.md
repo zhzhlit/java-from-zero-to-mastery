@@ -153,4 +153,4 @@ HTTP 基础的重点是看清文本协议边界：请求如何表达意图，响
 
 上一章：[JDBC 基础](./02-jdbc-basics.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入 Servlet 与 Web 基础。
+下一章：[Servlet 基础](./04-servlet-basics.md)
