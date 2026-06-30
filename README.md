@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.4.3。已经提供从第一个程序到算法入门的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习和主项目命令行课程管理入口。
+> 当前学习版本：v0.4.4。已经提供从第一个程序到网络基础的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习、网络基础练习和主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -71,6 +71,13 @@ mvn -B -pl exercises/algorithms-basics/starter -am test
 mvn -B -pl exercises/algorithms-basics/solution -am test
 ```
 
+验证网络基础练习：
+
+```bash
+mvn -B -pl exercises/network-basics/starter -am test
+mvn -B -pl exercises/network-basics/solution -am test
+```
+
 验证主项目命令行课程管理：
 
 ```bash
@@ -119,11 +126,13 @@ npm run docs:build --prefix website
 - [JUnit 5 专项练习](docs/zh-CN/guide/03-engineering-foundation/02-junit5-testing-basics.md)
 - [数据结构基础](docs/zh-CN/guide/03-engineering-foundation/03-data-structures-basics.md)
 - [算法入门](docs/zh-CN/guide/03-engineering-foundation/04-algorithms-basics.md)
+- [网络基础](docs/zh-CN/guide/03-engineering-foundation/05-network-basics.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
 - [数据结构基础练习](exercises/data-structures-basics/README.md)
 - [算法入门练习](exercises/algorithms-basics/README.md)
+- [网络基础练习](exercises/network-basics/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)
