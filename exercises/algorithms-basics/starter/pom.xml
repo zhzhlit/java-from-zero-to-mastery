@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.github.javamastery</groupId>
         <artifactId>algorithms-basics-exercises</artifactId>
-        <version>0.4.5-SNAPSHOT</version>
+        <version>0.4.6-SNAPSHOT</version>
     </parent>
     <artifactId>algorithms-basics-starter</artifactId>
 

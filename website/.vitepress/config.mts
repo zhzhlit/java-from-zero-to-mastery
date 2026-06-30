@@ -165,6 +165,15 @@ export default defineConfig({
         ]
       },
       {
+        text: '数据库与 Web',
+        items: [
+          {
+            text: '数据库基础',
+            link: '/zh-CN/guide/04-database-web/01-database-basics'
+          }
+        ]
+      },
+      {
         text: '练习与项目',
         items: [
           { text: 'Java 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/java-basics' },
@@ -174,6 +183,7 @@ export default defineConfig({
           { text: '算法入门练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/algorithms-basics' },
           { text: '网络基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/network-basics' },
           { text: '操作系统基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/operating-system-basics' },
+          { text: '数据库基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/database-basics' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -311,6 +321,15 @@ export default defineConfig({
             {
               text: '操作系统基础',
               link: '/zh-CN/guide/03-engineering-foundation/06-operating-system-basics'
+            }
+          ]
+        },
+        {
+          text: '数据库与 Web',
+          items: [
+            {
+              text: '数据库基础',
+              link: '/zh-CN/guide/04-database-web/01-database-basics'
             }
           ]
         },
