@@ -174,4 +174,4 @@ INSERT INTO courses (title, lesson_count, published) VALUES (?, ?, ?)
 
 上一章：[操作系统基础](../03-engineering-foundation/06-operating-system-basics.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入 JDBC、HTTP Servlet 与 Web 基础。
+下一章：[JDBC 基础](./02-jdbc-basics.md)

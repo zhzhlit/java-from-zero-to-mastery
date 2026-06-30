@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/04-database-web/01-database-basics
+      link: /zh-CN/guide/04-database-web/02-jdbc-basics
 
 features:
   - title: 学习路线
@@ -27,10 +27,10 @@ features:
     details: 建立测试、Maven、CI、JUnit 5、数据结构、算法、网络和操作系统基础。
     link: /zh-CN/guide/03-engineering-foundation/06-operating-system-basics
   - title: 数据库与 Web
-    details: 从表结构、SQL、参数化查询和结果映射开始进入后端持久化。
-    link: /zh-CN/guide/04-database-web/01-database-basics
+    details: 从表结构、SQL、JDBC、参数化查询和结果映射开始进入后端持久化。
+    link: /zh-CN/guide/04-database-web/02-jdbc-basics
   - title: 练习模块
-    details: 通过 starter/solution 双模块完成基础、面向对象、JUnit 5、数据结构、算法、网络、操作系统和数据库练习。
+    details: 通过 starter/solution 双模块完成基础、面向对象、JUnit 5、数据结构、算法、网络、操作系统、数据库和 JDBC 练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
