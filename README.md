@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.4.7。已经提供从第一个程序到 JDBC 基础的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习、网络基础练习、操作系统基础练习、数据库基础练习、JDBC 基础练习和主项目命令行课程管理入口。
+> 当前学习版本：v0.4.8。已经提供从第一个程序到 HTTP 基础的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习、网络基础练习、操作系统基础练习、数据库基础练习、JDBC 基础练习、HTTP 基础练习和主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -99,6 +99,13 @@ mvn -B -pl exercises/jdbc-basics/starter -am test
 mvn -B -pl exercises/jdbc-basics/solution -am test
 ```
 
+验证 HTTP 基础练习：
+
+```bash
+mvn -B -pl exercises/http-basics/starter -am test
+mvn -B -pl exercises/http-basics/solution -am test
+```
+
 验证主项目命令行课程管理：
 
 ```bash
@@ -151,6 +158,7 @@ npm run docs:build --prefix website
 - [操作系统基础](docs/zh-CN/guide/03-engineering-foundation/06-operating-system-basics.md)
 - [数据库基础](docs/zh-CN/guide/04-database-web/01-database-basics.md)
 - [JDBC 基础](docs/zh-CN/guide/04-database-web/02-jdbc-basics.md)
+- [HTTP 基础](docs/zh-CN/guide/04-database-web/03-http-basics.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
@@ -160,6 +168,7 @@ npm run docs:build --prefix website
 - [操作系统基础练习](exercises/operating-system-basics/README.md)
 - [数据库基础练习](exercises/database-basics/README.md)
 - [JDBC 基础练习](exercises/jdbc-basics/README.md)
+- [HTTP 基础练习](exercises/http-basics/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)
