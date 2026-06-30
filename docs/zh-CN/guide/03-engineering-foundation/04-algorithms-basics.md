@@ -145,4 +145,4 @@ Big O 关注输入规模增长时，步骤数量如何变化。
 
 上一章：[数据结构基础](./03-data-structures-basics.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入网络、操作系统、数据库与 Web 基础。
+下一章：[网络基础](./05-network-basics.md)
