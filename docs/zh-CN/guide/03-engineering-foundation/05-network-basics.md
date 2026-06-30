@@ -146,4 +146,4 @@ GET /courses?page=2 HTTP/1.1
 
 上一章：[算法入门](./04-algorithms-basics.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入操作系统、数据库与 Web 基础。
+下一章：[操作系统基础](./06-operating-system-basics.md)

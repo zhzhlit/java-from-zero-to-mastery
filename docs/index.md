@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/03-engineering-foundation/05-network-basics
+      link: /zh-CN/guide/03-engineering-foundation/06-operating-system-basics
 
 features:
   - title: 学习路线
@@ -24,10 +24,10 @@ features:
     details: 学习面向对象、异常、集合、泛型、I/O、时间、Stream 和标准库。
     link: /zh-CN/guide/02-java-core/01-classes-and-objects
   - title: 工程基础
-    details: 建立测试、Maven、CI、JUnit 5、数据结构、算法和网络基础。
-    link: /zh-CN/guide/03-engineering-foundation/05-network-basics
+    details: 建立测试、Maven、CI、JUnit 5、数据结构、算法、网络和操作系统基础。
+    link: /zh-CN/guide/03-engineering-foundation/06-operating-system-basics
   - title: 练习模块
-    details: 通过 starter/solution 双模块完成基础、面向对象、JUnit 5、数据结构、算法和网络练习。
+    details: 通过 starter/solution 双模块完成基础、面向对象、JUnit 5、数据结构、算法、网络和操作系统练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
