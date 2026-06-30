@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.4.10。已经提供从第一个程序到 Web 基础综合复盘的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习、网络基础练习、操作系统基础练习、数据库基础练习、JDBC 基础练习、HTTP 基础练习、Servlet 基础练习、Web 基础综合练习和主项目命令行课程管理入口。
+> 当前学习版本：v0.5.0。已经提供从第一个程序到 Spring Boot 基础的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习、网络基础练习、操作系统基础练习、数据库基础练习、JDBC 基础练习、HTTP 基础练习、Servlet 基础练习、Web 基础综合练习、Spring Boot 基础练习和主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -120,6 +120,13 @@ mvn -B -pl exercises/web-basics-review/starter -am test
 mvn -B -pl exercises/web-basics-review/solution -am test
 ```
 
+验证 Spring Boot 基础练习：
+
+```bash
+mvn -B -pl exercises/spring-boot-basics/starter -am test
+mvn -B -pl exercises/spring-boot-basics/solution -am test
+```
+
 验证主项目命令行课程管理：
 
 ```bash
@@ -175,6 +182,7 @@ npm run docs:build --prefix website
 - [HTTP 基础](docs/zh-CN/guide/04-database-web/03-http-basics.md)
 - [Servlet 基础](docs/zh-CN/guide/04-database-web/04-servlet-basics.md)
 - [Web 基础综合复盘](docs/zh-CN/guide/04-database-web/05-web-basics-review.md)
+- [Spring Boot 基础](docs/zh-CN/guide/05-enterprise-development/01-spring-boot-basics.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
@@ -187,6 +195,7 @@ npm run docs:build --prefix website
 - [HTTP 基础练习](exercises/http-basics/README.md)
 - [Servlet 基础练习](exercises/servlet-basics/README.md)
 - [Web 基础综合练习](exercises/web-basics-review/README.md)
+- [Spring Boot 基础练习](exercises/spring-boot-basics/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)
