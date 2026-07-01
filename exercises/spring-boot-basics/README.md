@@ -5,7 +5,7 @@
 - `starter`：学习者编辑区，提供待实现代码和带 `@Disabled` 的测试练习骨架。
 - `solution`：参考实现与完整自动化测试。
 
-请先阅读课程的 [Spring Boot 基础](../../docs/zh-CN/guide/05-enterprise-development/01-spring-boot-basics.md)，再进入 `starter`。本练习使用真实 Spring Boot Web 与 MockMvc，重点是掌握启动类、Controller、Service、DTO 和 JSON 接口测试。
+请先阅读课程的 [Spring Boot 基础](../../docs/zh-CN/guide/05-enterprise-development/01-spring-boot-basics.md)，再进入 `starter`。本练习使用 Spring Boot Web 与轻量 MockMvc 测试，重点是掌握启动类、Controller、Service、DTO 和 JSON 接口测试。
 
 验证 starter：
 
@@ -25,7 +25,7 @@ mvn -B -pl exercises/spring-boot-basics/solution -am test
 2. `CourseDto` 与 `CreateCourseRequest`：定义接口输入输出对象。
 3. `CourseService`：提供已发布课程列表、详情查询和草稿创建。
 4. `CourseController`：实现 REST 接口和状态码。
-5. `CourseControllerTest`：使用 `@WebMvcTest` 与 `MockMvc` 测试 MVC 边界。
+5. `CourseControllerTest`：使用 `MockMvc` 测试 MVC 边界。
 
 ## 完成标准
 

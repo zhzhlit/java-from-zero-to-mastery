@@ -96,7 +96,7 @@ public record CourseDto(long id, String title, int lessonCount, boolean publishe
 
 ## MVC 测试
 
-`@WebMvcTest` 只加载 MVC 相关组件，适合测试 Controller：
+本章练习使用 `MockMvcBuilders.standaloneSetup` 验证 Controller 的 HTTP 行为，不启动完整 Spring 上下文：
 
 ```java
 mockMvc.perform(get("/api/courses"))
@@ -122,7 +122,7 @@ mockMvc.perform(get("/api/courses"))
 - Controller 没有被扫描：确认启动类包名在共同上层包。
 - 忘记 `@RequestBody`：POST JSON 无法绑定到请求对象。
 - 创建成功仍返回 200：创建资源应优先使用 201。
-- 测试启动过重：Controller 测试优先使用 `@WebMvcTest`。
+- 测试启动过重：Controller 测试可以先使用轻量 `MockMvc`。
 - Service 中返回内部可变集合：应返回不可随意修改的视图或副本。
 
 ## 面试与复习题
@@ -132,7 +132,7 @@ mockMvc.perform(get("/api/courses"))
 3. Controller 与 Service 的职责边界是什么？
 4. DTO 为什么不应该直接等同于数据库表对象？
 5. `ResponseEntity.created` 适合什么场景？
-6. `@WebMvcTest` 和完整 `@SpringBootTest` 的区别是什么？
+6. `MockMvc` 适合验证 Controller 的哪些行为？
 
 ## 本章总结
 
@@ -142,4 +142,4 @@ Spring Boot 基础的重点是从“手写 Web 边界”走向“框架管理 We
 
 上一章：[Web 基础综合复盘](../04-database-web/05-web-basics-review.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入配置与分层架构。
+下一章：[Spring Boot 配置](./02-spring-boot-configuration.md)
