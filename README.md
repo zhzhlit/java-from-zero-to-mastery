@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.5.1。已经提供从第一个程序到 Spring Boot 配置的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习、网络基础练习、操作系统基础练习、数据库基础练习、JDBC 基础练习、HTTP 基础练习、Servlet 基础练习、Web 基础综合练习、Spring Boot 基础练习、Spring Boot 配置练习和主项目命令行课程管理入口。
+> 当前学习版本：v0.5.2。已经提供从第一个程序到 Spring Boot REST 校验的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习、网络基础练习、操作系统基础练习、数据库基础练习、JDBC 基础练习、HTTP 基础练习、Servlet 基础练习、Web 基础综合练习、Spring Boot 基础练习、Spring Boot 配置练习、Spring Boot REST 校验练习和主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -134,6 +134,13 @@ mvn -B -pl exercises/spring-boot-configuration/starter -am test
 mvn -B -pl exercises/spring-boot-configuration/solution -am test
 ```
 
+验证 Spring Boot REST 校验练习：
+
+```bash
+mvn -B -pl exercises/spring-boot-rest-validation/starter -am test
+mvn -B -pl exercises/spring-boot-rest-validation/solution -am test
+```
+
 验证主项目命令行课程管理：
 
 ```bash
@@ -191,6 +198,7 @@ npm run docs:build --prefix website
 - [Web 基础综合复盘](docs/zh-CN/guide/04-database-web/05-web-basics-review.md)
 - [Spring Boot 基础](docs/zh-CN/guide/05-enterprise-development/01-spring-boot-basics.md)
 - [Spring Boot 配置](docs/zh-CN/guide/05-enterprise-development/02-spring-boot-configuration.md)
+- [Spring Boot REST 校验](docs/zh-CN/guide/05-enterprise-development/03-spring-boot-rest-validation.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
@@ -205,6 +213,7 @@ npm run docs:build --prefix website
 - [Web 基础综合练习](exercises/web-basics-review/README.md)
 - [Spring Boot 基础练习](exercises/spring-boot-basics/README.md)
 - [Spring Boot 配置练习](exercises/spring-boot-configuration/README.md)
+- [Spring Boot REST 校验练习](exercises/spring-boot-rest-validation/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)

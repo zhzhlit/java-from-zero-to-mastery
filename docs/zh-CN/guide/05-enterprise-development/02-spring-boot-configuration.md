@@ -164,4 +164,4 @@ Spring Boot 配置的重点是把可变化参数从业务代码中分离出来�
 
 上一章：[Spring Boot 基础](./01-spring-boot-basics.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入分层架构。
+下一章：[Spring Boot REST 校验](./03-spring-boot-rest-validation.md)

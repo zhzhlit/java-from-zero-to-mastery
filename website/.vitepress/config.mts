@@ -199,6 +199,10 @@ export default defineConfig({
           {
             text: 'Spring Boot 配置',
             link: '/zh-CN/guide/05-enterprise-development/02-spring-boot-configuration'
+          },
+          {
+            text: 'Spring Boot REST 校验',
+            link: '/zh-CN/guide/05-enterprise-development/03-spring-boot-rest-validation'
           }
         ]
       },
@@ -219,6 +223,7 @@ export default defineConfig({
           { text: 'Web 基础综合练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/web-basics-review' },
           { text: 'Spring Boot 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-basics' },
           { text: 'Spring Boot 配置练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-configuration' },
+          { text: 'Spring Boot REST 校验练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-rest-validation' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -394,6 +399,10 @@ export default defineConfig({
             {
               text: 'Spring Boot 配置',
               link: '/zh-CN/guide/05-enterprise-development/02-spring-boot-configuration'
+            },
+            {
+              text: 'Spring Boot REST 校验',
+              link: '/zh-CN/guide/05-enterprise-development/03-spring-boot-rest-validation'
             }
           ]
         },
