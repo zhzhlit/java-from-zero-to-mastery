@@ -145,4 +145,4 @@ Spring Boot REST 校验的重点是把坏请求挡在 Controller 边界，并把
 
 上一章：[Spring Boot 配置](./02-spring-boot-configuration.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入分层架构与事务。
+下一章：[Spring Boot 分层架构](./04-spring-boot-layered-architecture.md)

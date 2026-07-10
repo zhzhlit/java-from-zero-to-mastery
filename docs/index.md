@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/05-enterprise-development/03-spring-boot-rest-validation
+      link: /zh-CN/guide/05-enterprise-development/04-spring-boot-layered-architecture
 
 features:
   - title: 学习路线
@@ -30,10 +30,10 @@ features:
     details: 从表结构、SQL、JDBC、HTTP、Servlet 和综合 Web API 练习开始进入后端开发。
     link: /zh-CN/guide/04-database-web/05-web-basics-review
   - title: 企业级开发
-    details: 从 Spring Boot 启动类、配置绑定、REST 校验、Controller、Service、DTO 和测试进入企业应用。
-    link: /zh-CN/guide/05-enterprise-development/03-spring-boot-rest-validation
+    details: 从 Spring Boot 启动类、配置绑定、REST 校验、分层架构、Controller、Service、Repository 和测试进入企业应用。
+    link: /zh-CN/guide/05-enterprise-development/04-spring-boot-layered-architecture
   - title: 练习模块
-    details: 通过 starter/solution 双模块完成基础、面向对象、JUnit 5、数据结构、算法、网络、操作系统、数据库、JDBC、HTTP、Servlet、Web 综合和 Spring Boot REST 校验练习。
+    details: 通过 starter/solution 双模块完成基础、面向对象、JUnit 5、数据结构、算法、网络、操作系统、数据库、JDBC、HTTP、Servlet、Web 综合和 Spring Boot 分层架构练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。

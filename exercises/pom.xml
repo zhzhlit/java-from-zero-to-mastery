@@ -7,7 +7,7 @@
     <parent>
         <groupId>io.github.javamastery</groupId>
         <artifactId>java-from-zero-to-mastery</artifactId>
-        <version>0.5.2-SNAPSHOT</version>
+        <version>0.5.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>exercises</artifactId>
@@ -30,5 +30,6 @@
         <module>spring-boot-basics</module>
         <module>spring-boot-configuration</module>
         <module>spring-boot-rest-validation</module>
+        <module>spring-boot-layered-architecture</module>
     </modules>
 </project>
