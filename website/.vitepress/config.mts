@@ -6,7 +6,7 @@ const vuePackages = new Set(['vue', 'vue/server-renderer'])
 export default defineConfig({
   title: 'Java 从零到精通',
   description: '以 Java 21 为基线的系统化 Java 学习项目',
-  base: '/java-from-zero-to-mastery/',
+  base: '/',
   srcDir: '../docs',
   outDir: './.vitepress/dist',
   rewrites: {
