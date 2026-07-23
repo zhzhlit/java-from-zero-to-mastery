@@ -8,6 +8,10 @@ verifiedAt: "2026-06-23"
 
 手册面向已经学过对应课程、需要快速查阅语法、API、命令、排查方法和工程约定的学习者。
 
+## 工程协作
+
+- [AI 规格工作流选型：Spec Kit、OpenSpec 与 Superpowers](ai-spec-workflows.md)
+
 ## 收录标准
 
 - 条目必须能独立查阅，并链接到相关课程或练习。
