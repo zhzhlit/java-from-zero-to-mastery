@@ -236,6 +236,7 @@ export default defineConfig({
         text: '参考资料',
         items: [
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
+          { text: 'AI 规格工作流', link: '/zh-CN/handbook/ai-spec-workflows' },
           { text: '面试与复习', link: '/zh-CN/interview/README' },
           { text: '写作规范', link: '/zh-CN/writing-guide' }
         ]
@@ -425,6 +426,7 @@ export default defineConfig({
           text: '参考资料',
           items: [
             { text: 'Java 手册', link: '/zh-CN/handbook/README' },
+            { text: 'AI 规格工作流', link: '/zh-CN/handbook/ai-spec-workflows' },
             { text: '面试与复习', link: '/zh-CN/interview/README' },
             { text: '写作规范', link: '/zh-CN/writing-guide' }
           ]
