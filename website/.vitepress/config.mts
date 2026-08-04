@@ -237,6 +237,7 @@ export default defineConfig({
         items: [
           { text: 'Java 手册', link: '/zh-CN/handbook/README' },
           { text: 'AI 规格工作流', link: '/zh-CN/handbook/ai-spec-workflows' },
+          { text: 'RAG 工具选型', link: '/zh-CN/handbook/rag-platforms' },
           { text: '面试与复习', link: '/zh-CN/interview/README' },
           { text: '写作规范', link: '/zh-CN/writing-guide' }
         ]
@@ -427,6 +428,7 @@ export default defineConfig({
           items: [
             { text: 'Java 手册', link: '/zh-CN/handbook/README' },
             { text: 'AI 规格工作流', link: '/zh-CN/handbook/ai-spec-workflows' },
+            { text: 'RAG 工具选型', link: '/zh-CN/handbook/rag-platforms' },
             { text: '面试与复习', link: '/zh-CN/interview/README' },
             { text: '写作规范', link: '/zh-CN/writing-guide' }
           ]

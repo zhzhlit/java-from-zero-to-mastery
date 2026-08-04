@@ -181,6 +181,7 @@ npm run docs:build --prefix website
 - [字符串与 StringBuilder](docs/zh-CN/guide/01-getting-started/07-strings-and-stringbuilder.md)
 - [IntelliJ IDEA 调试](docs/zh-CN/guide/01-getting-started/08-debugging-with-intellij-idea.md)
 - [AI 规格工作流选型：Spec Kit、OpenSpec 与 Superpowers](docs/zh-CN/handbook/ai-spec-workflows.md)
+- [RAG 工具与平台选型：Kapa.ai、Mastra、MimirQ 与 WeKnora](docs/zh-CN/handbook/rag-platforms.md)
 - [类与对象](docs/zh-CN/guide/02-java-core/01-classes-and-objects.md)
 - [封装](docs/zh-CN/guide/02-java-core/02-encapsulation.md)
 - [继承与多态](docs/zh-CN/guide/02-java-core/03-inheritance-and-polymorphism.md)
