@@ -11,6 +11,7 @@ verifiedAt: "2026-06-23"
 ## 工程协作
 
 - [AI 规格工作流选型：Spec Kit、OpenSpec 与 Superpowers](ai-spec-workflows.md)
+- [RAG 工具与平台选型：Kapa.ai、Mastra、MimirQ 与 WeKnora](rag-platforms.md)
 
 ## 收录标准
 
