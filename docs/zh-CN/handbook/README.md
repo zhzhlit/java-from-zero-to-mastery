@@ -12,6 +12,7 @@ verifiedAt: "2026-06-23"
 
 - [AI 规格工作流选型：Spec Kit、OpenSpec 与 Superpowers](ai-spec-workflows.md)
 - [RAG 工具与平台选型：Kapa.ai、Mastra、MimirQ 与 WeKnora](rag-platforms.md)
+- [Typora 图片上传与图床配置：PicList、Cloudflare R2 与 Markdown 迁移](typora-image-hosting.md)
 
 ## 收录标准
 
