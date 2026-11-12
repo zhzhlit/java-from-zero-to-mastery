@@ -142,4 +142,4 @@ event=http_request method=GET status=200 durationMs=3 completed=true
 
 上一章：[Spring Boot JDBC 与事务](./05-spring-boot-jdbc-transactions.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入安全基础等后续主题。
+下一章：[Spring Security 基础](./07-spring-boot-security.md)，学习认证、角色授权与 CSRF 防护。

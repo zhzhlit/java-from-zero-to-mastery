@@ -215,6 +215,10 @@ export default defineConfig({
           {
             text: 'Spring Boot 日志与请求追踪',
             link: '/zh-CN/guide/05-enterprise-development/06-spring-boot-logging'
+          },
+          {
+            text: 'Spring Security 基础',
+            link: '/zh-CN/guide/05-enterprise-development/07-spring-boot-security'
           }
         ]
       },
@@ -239,6 +243,7 @@ export default defineConfig({
           { text: 'Spring Boot 分层架构练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-layered-architecture' },
           { text: 'Spring Boot JDBC 与事务练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-jdbc-transactions' },
           { text: 'Spring Boot 日志与请求追踪练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-logging' },
+          { text: 'Spring Security 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-security' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -433,6 +438,10 @@ export default defineConfig({
             {
               text: 'Spring Boot 日志与请求追踪',
               link: '/zh-CN/guide/05-enterprise-development/06-spring-boot-logging'
+            },
+            {
+              text: 'Spring Security 基础',
+              link: '/zh-CN/guide/05-enterprise-development/07-spring-boot-security'
             }
           ]
         },
