@@ -229,7 +229,8 @@ export default defineConfig({
       {
         text: '中间件与分布式',
         items: [
-          { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' }
+          { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' },
+          { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' }
         ]
       },
       {
@@ -256,6 +257,7 @@ export default defineConfig({
           { text: 'Spring Security 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-security' },
           { text: '企业级开发综合复盘练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/enterprise-basics-review' },
           { text: '缓存基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/cache-basics' },
+          { text: 'Redis 共享缓存练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/redis-cache' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -464,7 +466,8 @@ export default defineConfig({
         {
           text: '中间件与分布式',
           items: [
-            { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' }
+            { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' },
+            { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' }
           ]
         },
         {

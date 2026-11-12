@@ -123,4 +123,4 @@ return updated;
 
 上一章：[企业级开发综合复盘](../05-enterprise-development/08-enterprise-basics-review.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入共享缓存与一致性等后续主题。
+下一章：[Redis 共享缓存](./02-redis-cache.md)，验证独立客户端共享、TTL 与失效边界。

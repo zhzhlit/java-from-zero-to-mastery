@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/06-middleware-distributed/01-cache-basics
+      link: /zh-CN/guide/06-middleware-distributed/02-redis-cache
 
 features:
   - title: 学习路线
@@ -36,8 +36,8 @@ features:
     details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发和缓存练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 中间件与分布式
-    details: 从 Caffeine 本地缓存开始，理解命中、过期、容量、失效和一致性边界。
-    link: /zh-CN/guide/06-middleware-distributed/01-cache-basics
+    details: 从 Caffeine 本地缓存到 Redis 共享缓存，验证命中、过期、命名空间与失效边界。
+    link: /zh-CN/guide/06-middleware-distributed/02-redis-cache
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
     link: /zh-CN/projects/flagship-roadmap
