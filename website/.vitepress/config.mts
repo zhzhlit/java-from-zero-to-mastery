@@ -219,6 +219,10 @@ export default defineConfig({
           {
             text: 'Spring Security 基础',
             link: '/zh-CN/guide/05-enterprise-development/07-spring-boot-security'
+          },
+          {
+            text: '企业级开发综合复盘',
+            link: '/zh-CN/guide/05-enterprise-development/08-enterprise-basics-review'
           }
         ]
       },
@@ -244,6 +248,7 @@ export default defineConfig({
           { text: 'Spring Boot JDBC 与事务练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-jdbc-transactions' },
           { text: 'Spring Boot 日志与请求追踪练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-logging' },
           { text: 'Spring Security 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-security' },
+          { text: '企业级开发综合复盘练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/enterprise-basics-review' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -442,6 +447,10 @@ export default defineConfig({
             {
               text: 'Spring Security 基础',
               link: '/zh-CN/guide/05-enterprise-development/07-spring-boot-security'
+            },
+            {
+              text: '企业级开发综合复盘',
+              link: '/zh-CN/guide/05-enterprise-development/08-enterprise-basics-review'
             }
           ]
         },

@@ -146,4 +146,4 @@ ERROR 分派是容器处理已有错误的内部请求，不等于公开所有 `
 
 上一章：[Spring Boot 日志与请求追踪](./06-spring-boot-logging.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入企业级开发综合复盘等后续主题。
+下一章：[企业级开发综合复盘](./08-enterprise-basics-review.md)，将身份、事务、数据库和日志串成完整报名链路。
