@@ -79,6 +79,10 @@ public class CourseEventQueue {
         return group;
     }
 
+    String streamName() {
+        return stream;
+    }
+
     private List<QueuedMessage> read(String consumer, int limit, StreamEntryID offset) {
         validateRead(consumer, limit);
         var result = redis.xreadGroup(group, consumer, XReadGroupParams.xReadGroupParams().count(limit),

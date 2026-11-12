@@ -28,7 +28,7 @@ mvn -B -pl exercises/message-queue-basics/solution -am test
 mvn -B -pl exercises/message-queue-basics/solution -am verify -Predis-it -Dredis.port=16389
 ```
 
-加上上一章，模块共 22 项默认测试、12 项集成测试。starter 对应测试类禁用，完成后移除标记；运行专用 Redis 和恢复示例见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics#readme)。
+加入下一章死信扩展后，模块共 34 项默认测试、20 项集成测试。starter 对应测试类禁用，完成后移除标记；运行专用 Redis 和恢复示例见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics#readme)。
 
 ## 自己的 pending 不等于接管
 
@@ -133,4 +133,4 @@ NotificationConsumer 接受来自同一队列和消费组的原始批次，逐�
 
 上一章：[消息队列基础](./05-message-queue-basics.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入毒消息、重试限制与死信处理。
+下一章：[毒消息、重试限制与死信处理](./07-retry-dead-letter.md)。

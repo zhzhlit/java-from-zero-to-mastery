@@ -32,7 +32,7 @@ mvn -B -pl exercises/message-queue-basics/solution -am verify -Predis-it -Dredis
 
 starter 两个测试类初始禁用，完成后移除标记。专用 Redis 和示例启动命令见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics#readme)。
 
-本章基础测试仍为 10 项默认、8 项真实 Redis；模块加入下一章的恢复和 Inbox 扩展后，总计为 22 项默认、12 项 Redis 集成测试，starter 对应四个测试类分别禁用。
+本章基础测试仍为 10 项默认、8 项真实 Redis；模块加入恢复、Inbox 及死信扩展后，总计为 34 项默认、20 项 Redis 集成测试，starter 对应七个测试类分别禁用。
 
 ## 消息为什么不同于直接调用
 

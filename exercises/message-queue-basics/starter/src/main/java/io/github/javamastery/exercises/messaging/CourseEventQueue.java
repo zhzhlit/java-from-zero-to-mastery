@@ -60,6 +60,10 @@ public class CourseEventQueue {
         return group;
     }
 
+    String streamName() {
+        return stream;
+    }
+
     private List<QueuedMessage> read(String consumer, int limit, StreamEntryID offset) {
         if (consumer == null || !SAFE_NAME.matcher(consumer).matches() || limit < 1 || limit > 100) {
             throw new IllegalArgumentException("消费者名称不合法，或批次大小不在 1 到 100 之间");

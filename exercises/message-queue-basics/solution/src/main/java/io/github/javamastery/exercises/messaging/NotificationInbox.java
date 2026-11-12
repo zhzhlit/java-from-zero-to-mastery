@@ -46,7 +46,7 @@ public class NotificationInbox {
                 throw duplicate;
             }
             if (!event.equals(committed.get())) {
-                throw new IllegalStateException("同一事件 ID 不能对应不同载荷", duplicate);
+                throw new EventPayloadConflictException(duplicate);
             }
             return false;
         }

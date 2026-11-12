@@ -1,4 +1,4 @@
-# 消息队列与消费者恢复练习
+# 消息队列、消费者恢复与死信练习
 
 使用 Redis Streams 与现有 Jedis 5.0.2，学习生产、消费组、pending 和显式确认。本地验证 Redis 7.4.12，不手写消息存储或消费组引擎。
 
@@ -8,7 +8,7 @@
 - 进阶：区分 `>` 读取新消息、`0-0` 读取自己的 pending，读取不自动确认。
 - 挑战：处理完成后显式 XACK，验证同组分摊、不同组各自接收与未确认重读。
 
-starter 提供队列、空闲接管、Inbox 和消费者的可编译骨架，字段编解码和读取辅助方法已提供。22 项默认测试、12 项真实 Redis 测试在四个测试类上禁用。完成后移除对应测试类的 `@Disabled`。solution 完整实现并启用全部对应测试。
+starter 提供队列、空闲接管、Inbox、失败策略和消费者的可编译骨架，字段编解码、Lua 脚本和读取辅助方法已提供。34 项默认测试、20 项真实 Redis 测试在七个测试类上禁用。完成后移除对应测试类的 `@Disabled`。solution 完整实现并启用全部对应测试。
 
 ## 默认验证
 
@@ -17,7 +17,7 @@ mvn -B -pl exercises/message-queue-basics/starter -am test
 mvn -B -pl exercises/message-queue-basics/solution -am test
 ```
 
-solution 运行 10 项基础测试和 12 项恢复/Inbox 测试，starter 跳过 22 项。Inbox 测试使用真实 H2 和模拟 Redis；默认测试不证明 Redis 服务行为。
+solution 运行 10 项基础测试、12 项恢复/Inbox 测试和 12 项失败策略测试，starter 跳过 34 项。Inbox 测试使用真实 H2 和模拟 Redis；默认测试不证明 Redis 服务行为。
 
 ## 真实 Redis 验证
 
@@ -35,7 +35,7 @@ docker stop java-mastery-streams
 redis-server --bind 127.0.0.1 --protected-mode yes --port 16389 --save '' --appendonly no --maxmemory 32mb --maxmemory-policy noeviction
 ```
 
-预期 solution 通过 22 项默认测试、12 项集成测试。服务不可达时 profile 失败，不自动跳过。每项测试使用随机 Stream，仅删除自身键；现有 CI 的 Redis 服务和 `redis-it` profile 会包含本模块。
+预期 solution 通过 34 项默认测试、20 项集成测试。服务不可达时 profile 失败，不自动跳过。每项测试使用随机 Stream，仅删除自身键；现有 CI 的 Redis 服务和 `redis-it` profile 会包含本模块。
 
 消息实例使用 noeviction，避免在内存压力下把 Stream 当作可淘汰缓存删除；达到上限时写入可能失败，需要调用方处理。开发命令关闭持久化，仅验证运行期行为，不证明 Redis 重启后消息还在。生产需独立设计持久化、高可用、保留策略和容量管理，不与可任意淘汰的缓存混用。
 
@@ -87,8 +87,35 @@ Pending after recovery: 0
 
 示例显式模拟数据库提交后未确认的间隙，再接管并重放；不是操作系统进程崩溃测试。默认测试另用文件型 H2 关闭重开，验证去重记录不依赖旧 Java 对象。
 
+## 重试与死信
+
+`StreamFailurePolicy` 使用 Lua 检查 pending 归属并维护消费组内失败次数；`ResilientNotificationConsumer` 逐条分类失败，坏消息不阻塞同批健康消息。上限包含第一次失败：配置 3 表示第三次失败进入死信，而非额外重试三次。只有 `TransientDataAccessException` 计入可重试失败；非法事件、同事件 ID 载荷冲突、业务约束失败立即进入死信。未知错误直接抛出，不擅自分类。
+
+数据库提交后确认失败不增加业务失败计数，后续依靠 Inbox 去重再确认。失败信息和原异常保留在批次结果中，调用方负责记录、告警和调度，不吞掉错误。
+
+脚本先追加死信，再保存终态和确认原消息。死信保留来源 Stream、消费组、Stream ID、错误码、失败次数与 `payload.` 前缀的原始字段；原载荷已删除时保留元数据及 `payloadMissing=1`。终态标记使正常响应重放不重复追加死信，也不重新执行业务。成功重试清理失败计数。
+
+完成依赖复制并启动专用 Redis 后：
+
+```bash
+REDIS_PORT=16389 java -cp 'exercises/message-queue-basics/solution/target/classes:exercises/message-queue-basics/solution/target/dependency/*' io.github.javamastery.exercises.messaging.DeadLetterDemo
+```
+
+```text
+Applied notifications: 1
+Dead-lettered messages: 1
+Dead-letter stream length: 1
+Pending after processing: 0
+```
+
+新增 8 项真实 Redis 测试覆盖坏消息隔离、重试到限、终态重放、死信键类型错误、接管后的归属检查、提交后确认失败、成功清理、组隔离和载荷已删除的审计。
+
 ## 边界
 
-读取和接管批次为 1 到 100，非阻塞；模块没有后台调度、死信、重试限制或事务性消息发送。自己的 pending 不是所有消费者的消息，跨消费者恢复需显式接管。解析失败仍保留 pending，不自动确认；死信与毒消息策略属于后续内容。
+读取和接管批次为 1 到 100，非阻塞；模块没有后台调度、退避、死信重投或事务性消息发送。自己的 pending 不是所有消费者的消息，跨消费者恢复需显式接管。旧 `NotificationConsumer` 保持失败即抛出的教学行为；新策略由 `ResilientNotificationConsumer` 显式启用。
+
+Lua 执行期间命令不会被其他客户端插入，但运行错误不会回滚已写状态。预检能避免常见键类型错误；若死信追加后保存终态时发生内存不足等错误，仍可能部分完成甚至重放出重复死信，不能宣称 exactly-once。消息、计数和死信键当前按单实例 Redis 设计，不直接支持 Cluster 跨槽执行。归属检查只保护 Redis 状态转换，不是数据库执行的全局 fencing。
+
+失败 Hash 和死信不自动过期，应制定容量、终态保留及安全清理规则；提前清理可能失去重放保护。原始载荷可能包含敏感信息，需限制死信访问、审计并制定保留策略。本例不自动删源消息，也不把 ACK 当作删除消息。
 
 Inbox 只约束相同数据源中的数据库副作用；不能保证外部邮件、HTTP 调用只执行一次，也不能弥补 Redis 未持久化时的消息丢失。去重记录的保留周期必须覆盖可重放消息周期。批次逐条提交，失败前的前缀可能已经完成，不是整个批次原子回滚，不宣称端到端 exactly-once。
