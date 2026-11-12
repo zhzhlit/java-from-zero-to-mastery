@@ -227,6 +227,12 @@ export default defineConfig({
         ]
       },
       {
+        text: '中间件与分布式',
+        items: [
+          { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' }
+        ]
+      },
+      {
         text: '练习与项目',
         items: [
           { text: 'Java 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/java-basics' },
@@ -249,6 +255,7 @@ export default defineConfig({
           { text: 'Spring Boot 日志与请求追踪练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-logging' },
           { text: 'Spring Security 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-security' },
           { text: '企业级开发综合复盘练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/enterprise-basics-review' },
+          { text: '缓存基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/cache-basics' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -452,6 +459,12 @@ export default defineConfig({
               text: '企业级开发综合复盘',
               link: '/zh-CN/guide/05-enterprise-development/08-enterprise-basics-review'
             }
+          ]
+        },
+        {
+          text: '中间件与分布式',
+          items: [
+            { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' }
           ]
         },
         {

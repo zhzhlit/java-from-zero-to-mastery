@@ -113,4 +113,4 @@ Service 使用容器代理的 `@Transactional` 方法，不在测试类或测试
 
 上一章：[Spring Security 基础](./07-spring-boot-security.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入中间件与分布式阶段的缓存基础。
+下一章：[缓存基础](../06-middleware-distributed/01-cache-basics.md)，进入中间件与分布式阶段。

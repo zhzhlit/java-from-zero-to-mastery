@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.5.7。已经提供从第一个程序到企业级开发综合复盘的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot 配置与分层、JDBC 事务、请求日志、Spring Security 及综合报名练习，并提供主项目命令行课程管理入口。
+> 当前学习版本：v0.6.0。已经提供从第一个程序到缓存基础的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、JDBC 事务、日志、安全、企业级综合复盘和 Caffeine 本地缓存练习，并提供主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -176,6 +176,13 @@ mvn -B -pl exercises/enterprise-basics-review/starter -am test
 mvn -B -pl exercises/enterprise-basics-review/solution -am test
 ```
 
+验证缓存基础练习：
+
+```bash
+mvn -B -pl exercises/cache-basics/starter -am test
+mvn -B -pl exercises/cache-basics/solution -am test
+```
+
 验证主项目命令行课程管理：
 
 ```bash
@@ -242,6 +249,7 @@ npm run docs:build --prefix website
 - [Spring Boot 日志与请求追踪](docs/zh-CN/guide/05-enterprise-development/06-spring-boot-logging.md)
 - [Spring Security 基础](docs/zh-CN/guide/05-enterprise-development/07-spring-boot-security.md)
 - [企业级开发综合复盘](docs/zh-CN/guide/05-enterprise-development/08-enterprise-basics-review.md)
+- [缓存基础](docs/zh-CN/guide/06-middleware-distributed/01-cache-basics.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
@@ -262,6 +270,7 @@ npm run docs:build --prefix website
 - [Spring Boot 日志与请求追踪练习](exercises/spring-boot-logging/README.md)
 - [Spring Security 基础练习](exercises/spring-boot-security/README.md)
 - [企业级开发综合复盘练习](exercises/enterprise-basics-review/README.md)
+- [缓存基础练习](exercises/cache-basics/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)
