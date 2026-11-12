@@ -232,7 +232,8 @@ export default defineConfig({
           { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' },
           { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' },
           { text: '事务提交后缓存失效', link: '/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation' },
-          { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' }
+          { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' },
+          { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' }
         ]
       },
       {
@@ -260,6 +261,7 @@ export default defineConfig({
           { text: '企业级开发综合复盘练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/enterprise-basics-review' },
           { text: '缓存基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/cache-basics' },
           { text: 'Redis 共享缓存练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/redis-cache' },
+          { text: '消息队列基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -471,7 +473,8 @@ export default defineConfig({
             { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' },
             { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' },
             { text: '事务提交后缓存失效', link: '/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation' },
-            { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' }
+            { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' },
+            { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' }
           ]
         },
         {

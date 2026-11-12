@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.6.3。已经提供从第一个程序到可靠失效与失败恢复的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、JDBC 事务、日志、安全、企业级综合复盘、Caffeine、Redis、提交后失效与 Outbox 恢复练习，并提供主项目命令行课程管理入口。
+> 当前学习版本：v0.6.4。已经提供从第一个程序到消息队列基础的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、事务、日志、安全、企业级综合复盘、缓存、Outbox 恢复和 Redis Streams 消费组练习，并提供主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -192,6 +192,15 @@ mvn -B -pl exercises/redis-cache/solution -am test
 mvn -B -pl exercises/redis-cache/solution -am verify -Predis-it -Dredis.port=16389
 ```
 
+验证消息队列基础练习：
+
+```bash
+mvn -B -pl exercises/message-queue-basics/starter -am test
+mvn -B -pl exercises/message-queue-basics/solution -am test
+# 启动专用 Redis 后执行真实集成测试：
+mvn -B -pl exercises/message-queue-basics/solution -am verify -Predis-it -Dredis.port=16389
+```
+
 验证主项目命令行课程管理：
 
 ```bash
@@ -262,6 +271,7 @@ npm run docs:build --prefix website
 - [Redis 共享缓存](docs/zh-CN/guide/06-middleware-distributed/02-redis-cache.md)
 - [事务提交后缓存失效](docs/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation.md)
 - [可靠失效与失败恢复](docs/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox.md)
+- [消息队列基础](docs/zh-CN/guide/06-middleware-distributed/05-message-queue-basics.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
@@ -284,6 +294,7 @@ npm run docs:build --prefix website
 - [企业级开发综合复盘练习](exercises/enterprise-basics-review/README.md)
 - [缓存基础练习](exercises/cache-basics/README.md)
 - [Redis 共享缓存练习](exercises/redis-cache/README.md)
+- [消息队列基础练习](exercises/message-queue-basics/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)

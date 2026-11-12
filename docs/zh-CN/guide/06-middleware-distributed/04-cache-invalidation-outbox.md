@@ -124,4 +124,4 @@ Outbox 将需要恢复的动作变成数据库状态，再以幂等操作处理�
 
 上一章：[事务提交后缓存失效](./03-cache-commit-invalidation.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入消息队列基础。
+下一章：[消息队列基础](./05-message-queue-basics.md)，学习消费组、pending 与显式确认。
