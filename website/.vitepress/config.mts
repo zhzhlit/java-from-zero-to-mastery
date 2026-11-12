@@ -230,7 +230,8 @@ export default defineConfig({
         text: '中间件与分布式',
         items: [
           { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' },
-          { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' }
+          { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' },
+          { text: '事务提交后缓存失效', link: '/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation' }
         ]
       },
       {
@@ -467,7 +468,8 @@ export default defineConfig({
           text: '中间件与分布式',
           items: [
             { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' },
-            { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' }
+            { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' },
+            { text: '事务提交后缓存失效', link: '/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation' }
           ]
         },
         {

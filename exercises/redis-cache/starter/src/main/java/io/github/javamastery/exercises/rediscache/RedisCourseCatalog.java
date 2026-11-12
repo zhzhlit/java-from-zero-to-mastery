@@ -26,7 +26,7 @@ public class RedisCourseCatalog {
     }
 
     public Optional<Course> findById(long id) {
-        throw new UnsupportedOperationException("练习：GET 命中返回，未命中读源并用 SET PX 一次写入值和 TTL");
+        throw new UnsupportedOperationException("练习：活动事务内直接读源；事务外 GET 命中返回，未命中读源并 SET PX");
     }
 
     public Course rename(long id, String title) {

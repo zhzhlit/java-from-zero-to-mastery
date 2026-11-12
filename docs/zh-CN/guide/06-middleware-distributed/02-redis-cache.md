@@ -32,6 +32,8 @@ mvn -B -pl exercises/redis-cache/solution -am verify -Predis-it -Dredis.port=163
 
 第二条需要先启动专用 Redis，命令见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/redis-cache#readme)。starter 两个测试类初始禁用，完成实现后移除标记。
 
+模块现已包含下一章的事务扩展：默认共 19 项测试，Redis profile 共 10 项集成测试。下面的 10 项与 6 项分别描述本章基础测试；活动事务内读取会按下一章规则直接读源，不访问共享缓存。
+
 ## 从 JVM 内存到共享服务
 
 上一章 Caffeine 位于当前 JVM，其他进程不能直接读取同一份缓存。Redis 是独立服务，客户端通过网络访问同一键空间。本例创建两个独立 JedisPooled 客户端和两个 Catalog 对象：第一次读取回源，第二个客户端读取相同键时命中 Redis，源查询数仍为 1。
@@ -116,4 +118,4 @@ TTL 限制单键有效时间，并不限制整个 Redis 的内存。练习启动
 
 上一章：[缓存基础](./01-cache-basics.md)
 
-继续按照[学习路线](../../roadmap/index.md)学习事务提交后的缓存失效与一致性。
+下一章：[事务提交后缓存失效](./03-cache-commit-invalidation.md)，验证外层事务与提交后故障。

@@ -2,6 +2,7 @@ package io.github.javamastery.exercises.rediscache;
 
 import redis.clients.jedis.JedisPooled;
 import redis.clients.jedis.params.SetParams;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import java.time.Duration;
 import java.util.Objects;
@@ -28,6 +29,9 @@ public class RedisCourseCatalog {
 
     public Optional<Course> findById(long id) {
         String key = key(id);
+        if (TransactionSynchronizationManager.isActualTransactionActive()) {
+            return source.findById(id);
+        }
         String cachedTitle = redis.get(key);
         if (cachedTitle != null) {
             return Optional.of(new Course(id, cachedTitle));
