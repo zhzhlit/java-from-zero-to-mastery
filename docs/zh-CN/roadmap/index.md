@@ -34,7 +34,7 @@ verifiedAt: "2026-06-26"
 
 ## 当前可学习内容
 
-v0.5.4 已提供以下连续学习内容：
+v0.5.5 已提供以下连续学习内容：
 
 1. [第一个 Java 程序](../guide/01-getting-started/01-first-java-program.md)
 2. [开发环境与 IntelliJ IDEA](../guide/01-getting-started/02-development-environment-and-idea.md)
@@ -72,5 +72,6 @@ v0.5.4 已提供以下连续学习内容：
 34. [Spring Boot REST 校验](../guide/05-enterprise-development/03-spring-boot-rest-validation.md)
 35. [Spring Boot 分层架构](../guide/05-enterprise-development/04-spring-boot-layered-architecture.md)
 36. [Spring Boot JDBC 与事务](../guide/05-enterprise-development/05-spring-boot-jdbc-transactions.md)
+37. [Spring Boot 日志与请求追踪](../guide/05-enterprise-development/06-spring-boot-logging.md)
 
-Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。计算机与工程基础已覆盖测试、Maven、CI 验证、JUnit 5 专项练习、数据结构基础、算法入门、网络基础和操作系统基础；数据库与 Web 已覆盖数据库基础、JDBC 基础、HTTP 基础、Servlet 基础和 Web 基础综合复盘；企业级开发已覆盖 Spring Boot 基础、配置绑定、REST 校验、分层架构，以及基于 H2 的 JDBC 数据库集成与事务提交/回滚。日志、安全基础与外部数据库部署仍为后续主题。
+Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。计算机与工程基础已覆盖测试、Maven、CI 验证、JUnit 5 专项练习、数据结构基础、算法入门、网络基础和操作系统基础；数据库与 Web 已覆盖数据库基础、JDBC 基础、HTTP 基础、Servlet 基础和 Web 基础综合复盘；企业级开发已覆盖 Spring Boot 基础、配置绑定、REST 校验、分层架构、基于 H2 的 JDBC 数据库集成与事务提交/回滚，以及同步请求的日志级别、请求 ID 和 MDC 清理。安全基础与外部数据库部署仍为后续主题。

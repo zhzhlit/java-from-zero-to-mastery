@@ -157,4 +157,4 @@ curl -i -H 'Content-Type: application/json' -d '{"student":"alice"}' http://loca
 
 上一章：[Spring Boot 分层架构](./04-spring-boot-layered-architecture.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入日志与安全基础等后续主题。
+下一章：[Spring Boot 日志与请求追踪](./06-spring-boot-logging.md)，为同步请求建立可检索的日志上下文。
