@@ -26,7 +26,7 @@ mvn -B -pl exercises/message-queue-basics/solution -am test
 mvn -B -pl exercises/message-queue-basics/solution -am verify -Predis-it -Dredis.port=16389
 ```
 
-本章新增 12 项默认测试、8 项 Redis 集成测试；模块共 34 项默认测试、20 项集成测试。starter 测试类均禁用，按任务完成后移除对应 `@Disabled`。专用 Redis 启动、依赖复制和 DeadLetterDemo 运行见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics#readme)。不要连接生产 Redis。
+本章新增 12 项默认测试、8 项 Redis 集成测试；加入发布 Outbox 后模块共 46 项默认测试、25 项集成测试。starter 测试类均禁用，按任务完成后移除对应 `@Disabled`。专用 Redis 启动、依赖复制和 DeadLetterDemo 运行见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics#readme)。不要连接生产 Redis。
 
 ## 失败分类
 
@@ -101,4 +101,4 @@ Inbox 将去重记录与通知写入同一个事务。事务成功返回后，�
 
 ## 下一步
 
-继续按照[学习路线](../../roadmap/index.md)进入可靠发布与 Outbox 到消息队列的衔接。
+下一章：[可靠发布与 Outbox 衔接](./08-outbox-stream-publishing.md)。

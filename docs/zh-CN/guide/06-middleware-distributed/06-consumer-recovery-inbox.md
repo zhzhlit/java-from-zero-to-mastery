@@ -28,7 +28,7 @@ mvn -B -pl exercises/message-queue-basics/solution -am test
 mvn -B -pl exercises/message-queue-basics/solution -am verify -Predis-it -Dredis.port=16389
 ```
 
-加入下一章死信扩展后，模块共 34 项默认测试、20 项集成测试。starter 对应测试类禁用，完成后移除标记；运行专用 Redis 和恢复示例见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics#readme)。
+加入死信和发布 Outbox 扩展后，模块共 46 项默认测试、25 项集成测试。starter 对应测试类禁用，完成后移除标记；运行专用 Redis 和恢复示例见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics#readme)。
 
 ## 自己的 pending 不等于接管
 

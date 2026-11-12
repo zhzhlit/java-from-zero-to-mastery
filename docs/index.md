@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/06-middleware-distributed/07-retry-dead-letter
+      link: /zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing
 
 features:
   - title: 学习路线
@@ -36,8 +36,8 @@ features:
     details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发和缓存练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 中间件与分布式
-    details: 从缓存与 Outbox 进入 Redis Streams，验证消费组、Inbox 幂等、重试限制与死信审计。
-    link: /zh-CN/guide/06-middleware-distributed/07-retry-dead-letter
+    details: 从缓存与 Outbox 进入 Redis Streams，验证可靠发布、Inbox 幂等、重试限制与死信审计。
+    link: /zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
     link: /zh-CN/projects/flagship-roadmap

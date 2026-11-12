@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.6.6。已经提供从第一个程序到毒消息、重试限制与死信处理的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、事务、日志、安全、企业级综合复盘、缓存、Outbox、Redis Streams、Inbox 幂等与死信练习，并提供主项目命令行课程管理入口。
+> 当前学习版本：v0.6.7。已经提供从第一个程序到可靠发布与 Outbox 衔接的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、事务、日志、安全、企业级综合复盘、缓存、Outbox、Redis Streams、Inbox 幂等、死信与可靠发布练习，并提供主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -274,6 +274,7 @@ npm run docs:build --prefix website
 - [消息队列基础](docs/zh-CN/guide/06-middleware-distributed/05-message-queue-basics.md)
 - [消费者失败恢复与消息幂等](docs/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox.md)
 - [毒消息、重试限制与死信处理](docs/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter.md)
+- [可靠发布与 Outbox 衔接](docs/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)

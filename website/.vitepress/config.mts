@@ -235,7 +235,8 @@ export default defineConfig({
           { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' },
           { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' },
           { text: '消费者失败恢复与消息幂等', link: '/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox' },
-          { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' }
+          { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' },
+          { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' }
         ]
       },
       {
@@ -478,7 +479,8 @@ export default defineConfig({
             { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' },
             { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' },
             { text: '消费者失败恢复与消息幂等', link: '/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox' },
-            { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' }
+            { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' },
+            { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' }
           ]
         },
         {
