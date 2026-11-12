@@ -5,6 +5,7 @@ import redis.clients.jedis.StreamEntryID;
 import redis.clients.jedis.exceptions.JedisDataException;
 import redis.clients.jedis.params.XReadGroupParams;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -49,6 +50,14 @@ public class CourseEventQueue {
 
     public long pendingCount() {
         throw new UnsupportedOperationException("练习：从 XINFO GROUPS 中读取指定消费组的 pending 总数");
+    }
+
+    public ClaimBatch claimIdle(String consumer, Duration minimumIdle, StreamEntryID start, int limit) {
+        throw new UnsupportedOperationException("练习：校验参数，使用 XAUTOCLAIM 接管空闲消息并保留返回游标");
+    }
+
+    String groupName() {
+        return group;
     }
 
     private List<QueuedMessage> read(String consumer, int limit, StreamEntryID offset) {

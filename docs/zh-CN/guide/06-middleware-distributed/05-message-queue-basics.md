@@ -32,6 +32,8 @@ mvn -B -pl exercises/message-queue-basics/solution -am verify -Predis-it -Dredis
 
 starter 两个测试类初始禁用，完成后移除标记。专用 Redis 和示例启动命令见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics#readme)。
 
+本章基础测试仍为 10 项默认、8 项真实 Redis；模块加入下一章的恢复和 Inbox 扩展后，总计为 22 项默认、12 项 Redis 集成测试，starter 对应四个测试类分别禁用。
+
 ## 消息为什么不同于直接调用
 
 课程发布后可以产生一个事件，消费者稍后处理。生产者和消费者不必在同一调用栈里，但也增加了投递状态、失败、重复和积压等问题。
@@ -123,4 +125,4 @@ XACK 不删除 Stream 中的记录。真实测试在确认后检查 pending 变�
 
 上一章：[可靠失效与失败恢复](./04-cache-invalidation-outbox.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入消费者失败恢复与消息幂等。
+下一章：[消费者失败恢复与消息幂等](./06-consumer-recovery-inbox.md)，验证跨消费者接管和确认前后的数据库状态。

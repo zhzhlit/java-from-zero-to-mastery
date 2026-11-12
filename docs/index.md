@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/06-middleware-distributed/05-message-queue-basics
+      link: /zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox
 
 features:
   - title: 学习路线
@@ -36,8 +36,8 @@ features:
     details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发和缓存练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 中间件与分布式
-    details: 从缓存与 Outbox 恢复进入 Redis Streams，验证消费组、pending 重读与显式确认。
-    link: /zh-CN/guide/06-middleware-distributed/05-message-queue-basics
+    details: 从缓存与 Outbox 进入 Redis Streams，验证消费组、空闲接管、Inbox 幂等与提交后确认。
+    link: /zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
     link: /zh-CN/projects/flagship-roadmap

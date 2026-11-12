@@ -4,7 +4,9 @@ import redis.clients.jedis.JedisPooled;
 import redis.clients.jedis.StreamEntryID;
 import redis.clients.jedis.exceptions.JedisDataException;
 import redis.clients.jedis.params.XReadGroupParams;
+import redis.clients.jedis.params.XAutoClaimParams;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -59,10 +61,26 @@ public class CourseEventQueue {
                 .findFirst().orElseThrow(() -> new IllegalStateException("消费组不存在")).getPending();
     }
 
-    private List<QueuedMessage> read(String consumer, int limit, StreamEntryID offset) {
-        if (consumer == null || !SAFE_NAME.matcher(consumer).matches() || limit < 1 || limit > 100) {
-            throw new IllegalArgumentException("消费者名称不合法，或批次大小不在 1 到 100 之间");
+    public ClaimBatch claimIdle(String consumer, Duration minimumIdle, StreamEntryID start, int limit) {
+        validateRead(consumer, limit);
+        Objects.requireNonNull(minimumIdle);
+        Objects.requireNonNull(start);
+        long idleMillis = minimumIdle.toMillis();
+        if (minimumIdle.isNegative() || (!minimumIdle.isZero() && idleMillis == 0)) {
+            throw new IllegalArgumentException("最小空闲时间必须为 0 或至少 1 毫秒");
         }
+        var claimed = redis.xautoclaim(stream, group, consumer, idleMillis, start,
+                XAutoClaimParams.xAutoClaimParams().count(limit));
+        return new ClaimBatch(claimed.getKey(), claimed.getValue().stream()
+                .map(entry -> new QueuedMessage(entry.getID(), entry.getFields())).toList());
+    }
+
+    String groupName() {
+        return group;
+    }
+
+    private List<QueuedMessage> read(String consumer, int limit, StreamEntryID offset) {
+        validateRead(consumer, limit);
         var result = redis.xreadGroup(group, consumer, XReadGroupParams.xReadGroupParams().count(limit),
                 Map.of(stream, offset));
         if (result == null) {
@@ -70,5 +88,11 @@ public class CourseEventQueue {
         }
         return result.stream().flatMap(entry -> entry.getValue().stream())
                 .map(entry -> new QueuedMessage(entry.getID(), entry.getFields())).toList();
+    }
+
+    private void validateRead(String consumer, int limit) {
+        if (consumer == null || !SAFE_NAME.matcher(consumer).matches() || limit < 1 || limit > 100) {
+            throw new IllegalArgumentException("消费者名称不合法，或批次大小不在 1 到 100 之间");
+        }
     }
 }

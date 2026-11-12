@@ -233,7 +233,8 @@ export default defineConfig({
           { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' },
           { text: '事务提交后缓存失效', link: '/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation' },
           { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' },
-          { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' }
+          { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' },
+          { text: '消费者失败恢复与消息幂等', link: '/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox' }
         ]
       },
       {
@@ -474,7 +475,8 @@ export default defineConfig({
             { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' },
             { text: '事务提交后缓存失效', link: '/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation' },
             { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' },
-            { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' }
+            { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' },
+            { text: '消费者失败恢复与消息幂等', link: '/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox' }
           ]
         },
         {
