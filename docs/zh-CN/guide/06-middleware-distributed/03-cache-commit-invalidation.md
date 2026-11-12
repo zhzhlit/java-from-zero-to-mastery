@@ -28,7 +28,7 @@ mvn -B -pl exercises/redis-cache/solution -am test
 mvn -B -pl exercises/redis-cache/solution -am verify -Predis-it -Dredis.port=16389
 ```
 
-包含上一章的测试后，solution 默认共 19 项，Redis profile 再执行 10 项集成测试。starter 对应测试初始禁用，完成后移除标记。专用 Redis 启动和演示命令见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/redis-cache#readme)。
+模块还包含后续 Outbox 扩展，solution 默认共 30 项测试，Redis profile 再执行 14 项集成测试。starter 对应测试初始禁用，完成后移除标记。专用 Redis 启动和演示命令见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/redis-cache#readme)。
 
 ## 为什么写源后立即删除还不够
 
@@ -121,4 +121,4 @@ afterCommit 开始时数据库已经提交。Redis DEL 失败，异常会传回�
 
 上一章：[Redis 共享缓存](./02-redis-cache.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入可靠失效与失败恢复。
+下一章：[可靠失效与失败恢复](./04-cache-invalidation-outbox.md)，将需要恢复的失效动作记录到数据库。

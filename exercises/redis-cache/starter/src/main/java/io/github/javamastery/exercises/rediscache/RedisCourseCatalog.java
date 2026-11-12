@@ -37,7 +37,7 @@ public class RedisCourseCatalog {
         throw new UnsupportedOperationException("练习：校验 ID 并删除命名空间内的单个键");
     }
 
-    private String key(long id) {
+    String key(long id) {
         if (id <= 0) {
             throw new IllegalArgumentException("课程 ID 必须大于 0");
         }

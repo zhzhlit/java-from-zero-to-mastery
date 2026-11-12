@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.6.2。已经提供从第一个程序到事务提交后缓存失效的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、JDBC 事务、日志、安全、企业级综合复盘、Caffeine 与 Redis 缓存及提交后失效练习，并提供主项目命令行课程管理入口。
+> 当前学习版本：v0.6.3。已经提供从第一个程序到可靠失效与失败恢复的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、JDBC 事务、日志、安全、企业级综合复盘、Caffeine、Redis、提交后失效与 Outbox 恢复练习，并提供主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -261,6 +261,7 @@ npm run docs:build --prefix website
 - [缓存基础](docs/zh-CN/guide/06-middleware-distributed/01-cache-basics.md)
 - [Redis 共享缓存](docs/zh-CN/guide/06-middleware-distributed/02-redis-cache.md)
 - [事务提交后缓存失效](docs/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation.md)
+- [可靠失效与失败恢复](docs/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)

@@ -32,7 +32,7 @@ mvn -B -pl exercises/redis-cache/solution -am verify -Predis-it -Dredis.port=163
 
 第二条需要先启动专用 Redis，命令见 [模块 README](https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/redis-cache#readme)。starter 两个测试类初始禁用，完成实现后移除标记。
 
-模块现已包含下一章的事务扩展：默认共 19 项测试，Redis profile 共 10 项集成测试。下面的 10 项与 6 项分别描述本章基础测试；活动事务内读取会按下一章规则直接读源，不访问共享缓存。
+模块还包含后续事务与 Outbox 扩展：默认共 30 项测试，Redis profile 共 14 项集成测试。下面的 10 项与 6 项分别描述本章基础测试；活动事务内读取会按下一章规则直接读源，不访问共享缓存。
 
 ## 从 JVM 内存到共享服务
 

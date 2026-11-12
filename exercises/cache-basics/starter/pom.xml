@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.github.javamastery</groupId>
         <artifactId>cache-basics-exercises</artifactId>
-        <version>0.6.2-SNAPSHOT</version>
+        <version>0.6.3-SNAPSHOT</version>
     </parent>
     <artifactId>cache-basics-starter</artifactId>
     <dependencies>

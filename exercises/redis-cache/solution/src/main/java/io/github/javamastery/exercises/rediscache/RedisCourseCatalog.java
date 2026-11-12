@@ -52,7 +52,7 @@ public class RedisCourseCatalog {
         redis.del(key(id));
     }
 
-    private String key(long id) {
+    String key(long id) {
         if (id <= 0) {
             throw new IllegalArgumentException("课程 ID 必须大于 0");
         }

@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation
+      link: /zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox
 
 features:
   - title: 学习路线
@@ -36,8 +36,8 @@ features:
     details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发和缓存练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 中间件与分布式
-    details: 从 Caffeine、Redis 到事务提交后失效，验证命中、回滚、提交时序和故障结果。
-    link: /zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation
+    details: 从 Caffeine、Redis 到提交后失效与 Outbox 恢复，验证回滚、重试和最终数据状态。
+    link: /zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
     link: /zh-CN/projects/flagship-roadmap
