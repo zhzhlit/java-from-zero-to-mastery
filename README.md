@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.7.0。已经提供从第一个程序到并发基础与线程任务的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、事务、安全、中间件组合实践，以及 Executor、Future、超时取消和共享计数练习，并提供主项目命令行课程管理入口。
+> 当前学习版本：v0.7.1。已经提供从第一个程序到线程池队列与拒绝策略的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、事务、安全、中间件组合实践，以及 Executor、Future、有界队列、超时取消和共享计数练习，并提供主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -309,6 +309,7 @@ npm run docs:build --prefix website
 - [RPC 基础](docs/zh-CN/guide/06-middleware-distributed/10-rpc-basics.md)
 - [中间件综合实践](docs/zh-CN/guide/06-middleware-distributed/11-middleware-basics-review.md)
 - [并发基础与线程任务](docs/zh-CN/guide/07-java-advanced/01-concurrency-basics.md)
+- [线程池队列与拒绝策略](docs/zh-CN/guide/07-java-advanced/02-thread-pool-queues.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
