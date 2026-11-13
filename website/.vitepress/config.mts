@@ -236,7 +236,8 @@ export default defineConfig({
           { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' },
           { text: '消费者失败恢复与消息幂等', link: '/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox' },
           { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' },
-          { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' }
+          { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' },
+          { text: '搜索基础', link: '/zh-CN/guide/06-middleware-distributed/09-search-basics' }
         ]
       },
       {
@@ -265,6 +266,7 @@ export default defineConfig({
           { text: '缓存基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/cache-basics' },
           { text: 'Redis 共享缓存练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/redis-cache' },
           { text: '消息队列基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics' },
+          { text: '搜索基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/search-basics' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -480,7 +482,8 @@ export default defineConfig({
             { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' },
             { text: '消费者失败恢复与消息幂等', link: '/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox' },
             { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' },
-            { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' }
+            { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' },
+            { text: '搜索基础', link: '/zh-CN/guide/06-middleware-distributed/09-search-basics' }
           ]
         },
         {

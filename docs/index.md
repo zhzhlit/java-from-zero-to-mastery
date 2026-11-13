@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing
+      link: /zh-CN/guide/06-middleware-distributed/09-search-basics
 
 features:
   - title: 学习路线
@@ -33,11 +33,11 @@ features:
     details: 将 Spring Boot 配置、分层架构、JDBC 事务、请求日志与安全组合成可验证的报名链路。
     link: /zh-CN/guide/05-enterprise-development/08-enterprise-basics-review
   - title: 练习模块
-    details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发和缓存练习。
+    details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发、缓存和搜索练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 中间件与分布式
-    details: 从缓存与 Outbox 进入 Redis Streams，验证可靠发布、Inbox 幂等、重试限制与死信审计。
-    link: /zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing
+    details: 从缓存与消息队列进入 Lucene 搜索，验证可靠发布、幂等和索引可见性。
+    link: /zh-CN/guide/06-middleware-distributed/09-search-basics
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
     link: /zh-CN/projects/flagship-roadmap

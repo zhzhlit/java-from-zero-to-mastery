@@ -106,4 +106,4 @@ Outbox 历史及 Inbox 去重记录需按消息重放窗口保留，删除前评
 - published 与消费完成、死信分别是什么关系？
 - 多个投递器并发时，仅靠 synchronized 为什么不够？
 
-继续按照[学习路线](../../roadmap/index.md)进入搜索基础，再学习 RPC 与中间件综合实践。
+下一章：[搜索基础](./09-search-basics.md)，然后进入 RPC 与中间件综合实践。
