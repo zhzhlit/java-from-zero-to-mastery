@@ -35,6 +35,10 @@ jobs:
           cache-dependency-path: website/package-lock.json
       - name: Verify Java
         run: mvn -B verify -Predis-it
+      - name: Run middleware review runtime smoke test
+        run: |
+          mvn -B -pl exercises/middleware-basics-review/solution -am package dependency:copy-dependencies -DincludeScope=runtime -DoutputDirectory=target/dependency
+          java -cp 'exercises/middleware-basics-review/solution/target/classes:exercises/middleware-basics-review/solution/target/dependency/*' io.github.javamastery.exercises.middleware.MiddlewareReviewDemo
       - name: Install website dependencies
         run: npm ci --prefix website
       - name: Check documentation links

@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/06-middleware-distributed/10-rpc-basics
+      link: /zh-CN/guide/06-middleware-distributed/11-middleware-basics-review
 
 features:
   - title: 学习路线
@@ -36,8 +36,8 @@ features:
     details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发、缓存、搜索和 RPC 练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 中间件与分布式
-    details: 从缓存、消息队列和搜索进入 gRPC，验证类型契约、错误状态与调用预算。
-    link: /zh-CN/guide/06-middleware-distributed/10-rpc-basics
+    details: 组合数据库、可靠事件、搜索和 RPC，验证异步可见性、幂等与失败恢复。
+    link: /zh-CN/guide/06-middleware-distributed/11-middleware-basics-review
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
     link: /zh-CN/projects/flagship-roadmap

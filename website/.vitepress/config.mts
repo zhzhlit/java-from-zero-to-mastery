@@ -238,7 +238,8 @@ export default defineConfig({
           { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' },
           { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' },
           { text: '搜索基础', link: '/zh-CN/guide/06-middleware-distributed/09-search-basics' },
-          { text: 'RPC 基础', link: '/zh-CN/guide/06-middleware-distributed/10-rpc-basics' }
+          { text: 'RPC 基础', link: '/zh-CN/guide/06-middleware-distributed/10-rpc-basics' },
+          { text: '中间件综合实践', link: '/zh-CN/guide/06-middleware-distributed/11-middleware-basics-review' }
         ]
       },
       {
@@ -269,6 +270,7 @@ export default defineConfig({
           { text: '消息队列基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics' },
           { text: '搜索基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/search-basics' },
           { text: 'RPC 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/rpc-basics' },
+          { text: '中间件综合实践练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/middleware-basics-review' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -486,7 +488,8 @@ export default defineConfig({
             { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' },
             { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' },
             { text: '搜索基础', link: '/zh-CN/guide/06-middleware-distributed/09-search-basics' },
-            { text: 'RPC 基础', link: '/zh-CN/guide/06-middleware-distributed/10-rpc-basics' }
+            { text: 'RPC 基础', link: '/zh-CN/guide/06-middleware-distributed/10-rpc-basics' },
+            { text: '中间件综合实践', link: '/zh-CN/guide/06-middleware-distributed/11-middleware-basics-review' }
           ]
         },
         {
