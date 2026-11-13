@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/06-middleware-distributed/11-middleware-basics-review
+      link: /zh-CN/guide/07-java-advanced/01-concurrency-basics
 
 features:
   - title: 学习路线
@@ -38,6 +38,9 @@ features:
   - title: 中间件与分布式
     details: 组合数据库、可靠事件、搜索和 RPC，验证异步可见性、幂等与失败恢复。
     link: /zh-CN/guide/06-middleware-distributed/11-middleware-basics-review
+  - title: Java 高级
+    details: 从线程任务进入并发，验证有序结果、异常传播、超时取消和共享计数。
+    link: /zh-CN/guide/07-java-advanced/01-concurrency-basics
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
     link: /zh-CN/projects/flagship-roadmap
