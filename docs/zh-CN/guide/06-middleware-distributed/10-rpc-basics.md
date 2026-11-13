@@ -102,4 +102,4 @@ Channel 由创建者持有，CourseRpcClient 只借用。结束时关闭 channel
 - deadline 到期时，服务端业务可能已经成功吗？
 - 为什么共享协议不等于共享服务实现类？
 
-继续按照[学习路线](../../roadmap/index.md)进入中间件综合实践，串联权威数据、可靠事件、搜索投影与服务边界。
+下一章：[中间件综合实践](./11-middleware-basics-review.md)，串联权威数据、可靠事件、搜索投影与服务边界。
