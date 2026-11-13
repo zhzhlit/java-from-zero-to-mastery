@@ -25,7 +25,7 @@ mvn -B -pl exercises/concurrency-basics/starter -am test
 mvn -B -pl exercises/concurrency-basics/solution -am verify
 ```
 
-starter 的测试使用类级 `@Disabled`，完成后移除；不需要 Redis 或外部服务器。
+本章基础测试为 13 项，加入下一章后模块共 23 项。starter 的测试使用类级 `@Disabled`，完成后移除；不需要 Redis 或外部服务器。
 
 ## 任务不等于线程
 
@@ -85,4 +85,4 @@ CompletionCounter 使用 AtomicInteger.incrementAndGet。测试让四个任务�
 
 本章每批最多 1000 项，但多个调用仍可能累计排队；newFixedThreadPool 的队列并不是有界队列。线程数、队列、拒绝策略和负载治理不能只凭本例参数推断。
 
-按[学习路线](../../roadmap/index.md)进入线程池队列与拒绝策略，再学习锁、内存模型及虚拟线程。
+下一章：[线程池队列与拒绝策略](./02-thread-pool-queues.md)。其中会进一步验证 CallerRuns 可能阻塞提交，因此本章等待预算不能当作任意执行器上的硬截止时间。
