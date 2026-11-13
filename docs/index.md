@@ -11,7 +11,7 @@ hero:
       link: /zh-CN/roadmap/
     - theme: alt
       text: 进入当前阶段
-      link: /zh-CN/guide/06-middleware-distributed/09-search-basics
+      link: /zh-CN/guide/06-middleware-distributed/10-rpc-basics
 
 features:
   - title: 学习路线
@@ -33,11 +33,11 @@ features:
     details: 将 Spring Boot 配置、分层架构、JDBC 事务、请求日志与安全组合成可验证的报名链路。
     link: /zh-CN/guide/05-enterprise-development/08-enterprise-basics-review
   - title: 练习模块
-    details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发、缓存和搜索练习。
+    details: 通过 starter/solution 双模块完成基础、工程、Web、企业开发、缓存、搜索和 RPC 练习。
     link: https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises
   - title: 中间件与分布式
-    details: 从缓存与消息队列进入 Lucene 搜索，验证可靠发布、幂等和索引可见性。
-    link: /zh-CN/guide/06-middleware-distributed/09-search-basics
+    details: 从缓存、消息队列和搜索进入 gRPC，验证类型契约、错误状态与调用预算。
+    link: /zh-CN/guide/06-middleware-distributed/10-rpc-basics
   - title: 主项目
     details: 跟随命令行课程管理项目，逐步演进到完整后端应用。
     link: /zh-CN/projects/flagship-roadmap

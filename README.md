@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.6.8。已经提供从第一个程序到搜索基础的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、事务、日志、安全、企业级综合复盘、缓存、Outbox、Redis Streams、Inbox 幂等、死信、可靠发布与 Lucene 搜索练习，并提供主项目命令行课程管理入口。
+> 当前学习版本：v0.6.9。已经提供从第一个程序到 RPC 基础的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、事务、日志、安全、企业级综合复盘、缓存、Outbox、Redis Streams、Inbox 幂等、死信、可靠发布、Lucene 搜索与 gRPC 练习，并提供主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -208,6 +208,13 @@ mvn -B -pl exercises/search-basics/starter -am test
 mvn -B -pl exercises/search-basics/solution -am verify
 ```
 
+验证 RPC 基础练习：
+
+```bash
+mvn -B -pl exercises/rpc-basics/starter -am test
+mvn -B -pl exercises/rpc-basics/solution -am verify
+```
+
 验证主项目命令行课程管理：
 
 ```bash
@@ -283,6 +290,7 @@ npm run docs:build --prefix website
 - [毒消息、重试限制与死信处理](docs/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter.md)
 - [可靠发布与 Outbox 衔接](docs/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing.md)
 - [搜索基础](docs/zh-CN/guide/06-middleware-distributed/09-search-basics.md)
+- [RPC 基础](docs/zh-CN/guide/06-middleware-distributed/10-rpc-basics.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
@@ -307,6 +315,7 @@ npm run docs:build --prefix website
 - [Redis 共享缓存练习](exercises/redis-cache/README.md)
 - [消息队列基础练习](exercises/message-queue-basics/README.md)
 - [搜索基础练习](exercises/search-basics/README.md)
+- [RPC 基础练习](exercises/rpc-basics/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)

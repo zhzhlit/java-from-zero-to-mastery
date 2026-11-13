@@ -34,7 +34,7 @@ verifiedAt: "2026-06-26"
 
 ## 当前可学习内容
 
-v0.6.8 已提供以下连续学习内容：
+v0.6.9 已提供以下连续学习内容：
 
 1. [第一个 Java 程序](../guide/01-getting-started/01-first-java-program.md)
 2. [开发环境与 IntelliJ IDEA](../guide/01-getting-started/02-development-environment-and-idea.md)
@@ -84,5 +84,6 @@ v0.6.8 已提供以下连续学习内容：
 46. [毒消息、重试限制与死信处理](../guide/06-middleware-distributed/07-retry-dead-letter.md)
 47. [可靠发布与 Outbox 衔接](../guide/06-middleware-distributed/08-outbox-stream-publishing.md)
 48. [搜索基础](../guide/06-middleware-distributed/09-search-basics.md)
+49. [RPC 基础](../guide/06-middleware-distributed/10-rpc-basics.md)
 
-Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。计算机与工程基础已覆盖测试、Maven、CI 验证、JUnit 5、数据结构、算法、网络和操作系统；数据库与 Web 已覆盖数据库、JDBC、HTTP、Servlet 和综合复盘；企业级开发已覆盖 Spring Boot 配置、REST 校验、分层、H2 事务、日志、Spring Security 及综合报名链路。中间件与分布式已覆盖 Caffeine、Redis、事务失效、Outbox、消息消费组、空闲接管、Inbox 数据库幂等、失败分类、重试限制、死信、可靠发布衔接及 Lucene 搜索基础；RPC、中间件综合实践和外部数据库部署仍为后续主题。
+Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。计算机与工程基础已覆盖测试、Maven、CI 验证、JUnit 5、数据结构、算法、网络和操作系统；数据库与 Web 已覆盖数据库、JDBC、HTTP、Servlet 和综合复盘；企业级开发已覆盖 Spring Boot 配置、REST 校验、分层、H2 事务、日志、Spring Security 及综合报名链路。中间件与分布式已覆盖 Caffeine、Redis、事务失效、Outbox、消息消费组、空闲接管、Inbox 数据库幂等、失败分类、重试限制、死信、可靠发布衔接、Lucene 搜索及 gRPC 基础；中间件综合实践和外部数据库部署仍为后续主题。
