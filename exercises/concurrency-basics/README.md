@@ -7,8 +7,9 @@
 - BatchTaskRunner.run：校验并复制任务列表，使用一个批次预算执行，按输入顺序收集结果。
 - CompletionCounter.recordCompletion：用原子操作增加完成计数，避免普通 `count++` 的竞争。
 - BoundedTaskPools.newFixedPool：配置有界队列，选择显式拒绝或带关闭检查的 CallerRuns。
+- CourseSeatLedger：用同一把锁保护名额、成员集合、转让与容量调整，返回一致快照。
 
-starter 提供可编译骨架，23 项测试在两个测试类上使用 `@Disabled`；完成后移除对应标记。solution 完整实现并启用全部测试，其中 13 项验证基础任务，10 项验证有界队列和拒绝策略。
+starter 提供可编译骨架，33 项测试在三个测试类上使用 `@Disabled`；完成后移除对应标记。solution 完整实现并启用全部测试，其中基础任务 13 项、有界队列 10 项、锁与复合状态 10 项。
 
 ```bash
 mvn -B -pl exercises/concurrency-basics/starter -am test
@@ -76,6 +77,31 @@ CallerRuns 不是总并发上限：工作线程之外，多个提交者也能执
 
 - [ThreadPoolExecutor](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html)
 - [原生 CallerRunsPolicy](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.CallerRunsPolicy.html)
+
+## 锁与复合状态
+
+CourseSeatLedger 维护 `capacity = available + learners.size()`。容量为 1 到 10000，学员标识为 1 到 64 位 ASCII 字母、数字、下划线或连字符。所有共享读写使用同一个私有 ReentrantLock，不依靠多个独立原子字段拼出业务一致性。
+
+reserve 区分预订成功、已预订、满额；重复学员不再占名额。cancel 不存在时返回 false。transfer 在同一账本中替换成员，双方必须不同，来源不存在或目标已有预订时不修改状态。resize 不能小于已预订人数，校验成功后一起调整容量和余量。
+
+四个修改方法使用 lockInterruptibly，向调用方传播 InterruptedException；获得锁后始终 finally 解锁。snapshot 使用普通 lock，可能等待，不承诺可中断读取；其集合是复制后的不可变集合，不暴露内部 HashSet，也不会随以后修改改变。
+
+```bash
+java -cp exercises/concurrency-basics/solution/target/classes io.github.javamastery.exercises.concurrency.LockStateDemo
+```
+
+```text
+Reserved: 5
+Full: 15
+After transfer reserved: 5
+After cancellation and resize available: 3
+```
+
+新增 10 项测试覆盖并发不超卖、重复预订、幂等取消、转让、调整容量、一致快照、预先中断、异常后其他线程继续操作和独立账本状态。协调开始不等于穷尽所有线程调度；测试不承诺谁先预订成功，也不验证锁公平性或性能。
+
+这是同一 JVM 中、同一账本实例的保护，不是跨实例或跨进程不超卖方案。锁不自动回滚异常前的修改，不提供外部 I/O、数据库事务或分布式幂等；不要在锁内调用外部服务或不受控回调。
+
+- [ReentrantLock](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/ReentrantLock.html)
 
 - [ExecutorService](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)
 - [Future](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Future.html)

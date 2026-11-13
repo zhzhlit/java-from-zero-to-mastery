@@ -246,7 +246,8 @@ export default defineConfig({
         text: 'Java 高级',
         items: [
           { text: '并发基础与线程任务', link: '/zh-CN/guide/07-java-advanced/01-concurrency-basics' },
-          { text: '线程池队列与拒绝策略', link: '/zh-CN/guide/07-java-advanced/02-thread-pool-queues' }
+          { text: '线程池队列与拒绝策略', link: '/zh-CN/guide/07-java-advanced/02-thread-pool-queues' },
+          { text: '锁与复合状态', link: '/zh-CN/guide/07-java-advanced/03-locks-composite-state' }
         ]
       },
       {
@@ -504,7 +505,8 @@ export default defineConfig({
           text: 'Java 高级',
           items: [
             { text: '并发基础与线程任务', link: '/zh-CN/guide/07-java-advanced/01-concurrency-basics' },
-            { text: '线程池队列与拒绝策略', link: '/zh-CN/guide/07-java-advanced/02-thread-pool-queues' }
+            { text: '线程池队列与拒绝策略', link: '/zh-CN/guide/07-java-advanced/02-thread-pool-queues' },
+            { text: '锁与复合状态', link: '/zh-CN/guide/07-java-advanced/03-locks-composite-state' }
           ]
         },
         {
