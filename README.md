@@ -2,7 +2,7 @@
 
 一套面向大学生、Java 初级开发者和中级开发者的开源学习项目，以 Java 21 为基线，提供系统课程、工程手册和递进式实战。
 
-> 当前学习版本：v0.5.3。已经提供从第一个程序到 Spring Boot 分层架构的连续学习路线，以及成绩统计器、Java 核心综合练习、JUnit 5 专项练习、数据结构基础练习、算法入门练习、网络基础练习、操作系统基础练习、数据库基础练习、JDBC 基础练习、HTTP 基础练习、Servlet 基础练习、Web 基础综合练习、Spring Boot 基础练习、Spring Boot 配置练习、Spring Boot REST 校验练习、Spring Boot 分层架构练习和主项目命令行课程管理入口。
+> 当前学习版本：v0.6.9。已经提供从第一个程序到 RPC 基础的连续学习路线，包含 Java 基础与核心、工程基础、数据库与 Web、Spring Boot、事务、日志、安全、企业级综合复盘、缓存、Outbox、Redis Streams、Inbox 幂等、死信、可靠发布、Lucene 搜索与 gRPC 练习，并提供主项目命令行课程管理入口。
 
 ## 三条学习主线
 
@@ -148,6 +148,73 @@ mvn -B -pl exercises/spring-boot-layered-architecture/starter -am test
 mvn -B -pl exercises/spring-boot-layered-architecture/solution -am test
 ```
 
+验证 Spring Boot JDBC 与事务练习：
+
+```bash
+mvn -B -pl exercises/spring-boot-jdbc-transactions/starter -am test
+mvn -B -pl exercises/spring-boot-jdbc-transactions/solution -am test
+```
+
+验证 Spring Boot 日志与请求追踪练习：
+
+```bash
+mvn -B -pl exercises/spring-boot-logging/starter -am test
+mvn -B -pl exercises/spring-boot-logging/solution -am test
+```
+
+验证 Spring Security 基础练习：
+
+```bash
+mvn -B -pl exercises/spring-boot-security/starter -am test
+mvn -B -pl exercises/spring-boot-security/solution -am test
+```
+
+验证企业级开发综合复盘练习：
+
+```bash
+mvn -B -pl exercises/enterprise-basics-review/starter -am test
+mvn -B -pl exercises/enterprise-basics-review/solution -am test
+```
+
+验证缓存基础练习：
+
+```bash
+mvn -B -pl exercises/cache-basics/starter -am test
+mvn -B -pl exercises/cache-basics/solution -am test
+```
+
+验证 Redis 共享缓存练习：
+
+```bash
+mvn -B -pl exercises/redis-cache/starter -am test
+mvn -B -pl exercises/redis-cache/solution -am test
+# 按模块 README 启动专用 Redis 后运行真实集成测试：
+mvn -B -pl exercises/redis-cache/solution -am verify -Predis-it -Dredis.port=16389
+```
+
+验证消息队列基础练习：
+
+```bash
+mvn -B -pl exercises/message-queue-basics/starter -am test
+mvn -B -pl exercises/message-queue-basics/solution -am test
+# 启动专用 Redis 后执行真实集成测试：
+mvn -B -pl exercises/message-queue-basics/solution -am verify -Predis-it -Dredis.port=16389
+```
+
+验证搜索基础练习：
+
+```bash
+mvn -B -pl exercises/search-basics/starter -am test
+mvn -B -pl exercises/search-basics/solution -am verify
+```
+
+验证 RPC 基础练习：
+
+```bash
+mvn -B -pl exercises/rpc-basics/starter -am test
+mvn -B -pl exercises/rpc-basics/solution -am verify
+```
+
 验证主项目命令行课程管理：
 
 ```bash
@@ -210,6 +277,20 @@ npm run docs:build --prefix website
 - [Spring Boot 配置](docs/zh-CN/guide/05-enterprise-development/02-spring-boot-configuration.md)
 - [Spring Boot REST 校验](docs/zh-CN/guide/05-enterprise-development/03-spring-boot-rest-validation.md)
 - [Spring Boot 分层架构](docs/zh-CN/guide/05-enterprise-development/04-spring-boot-layered-architecture.md)
+- [Spring Boot JDBC 与事务](docs/zh-CN/guide/05-enterprise-development/05-spring-boot-jdbc-transactions.md)
+- [Spring Boot 日志与请求追踪](docs/zh-CN/guide/05-enterprise-development/06-spring-boot-logging.md)
+- [Spring Security 基础](docs/zh-CN/guide/05-enterprise-development/07-spring-boot-security.md)
+- [企业级开发综合复盘](docs/zh-CN/guide/05-enterprise-development/08-enterprise-basics-review.md)
+- [缓存基础](docs/zh-CN/guide/06-middleware-distributed/01-cache-basics.md)
+- [Redis 共享缓存](docs/zh-CN/guide/06-middleware-distributed/02-redis-cache.md)
+- [事务提交后缓存失效](docs/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation.md)
+- [可靠失效与失败恢复](docs/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox.md)
+- [消息队列基础](docs/zh-CN/guide/06-middleware-distributed/05-message-queue-basics.md)
+- [消费者失败恢复与消息幂等](docs/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox.md)
+- [毒消息、重试限制与死信处理](docs/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter.md)
+- [可靠发布与 Outbox 衔接](docs/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing.md)
+- [搜索基础](docs/zh-CN/guide/06-middleware-distributed/09-search-basics.md)
+- [RPC 基础](docs/zh-CN/guide/06-middleware-distributed/10-rpc-basics.md)
 - [成绩统计器练习](exercises/java-basics/README.md)
 - [面向对象练习](exercises/object-oriented/README.md)
 - [JUnit 5 专项练习模块](exercises/testing-basics/README.md)
@@ -226,6 +307,15 @@ npm run docs:build --prefix website
 - [Spring Boot 配置练习](exercises/spring-boot-configuration/README.md)
 - [Spring Boot REST 校验练习](exercises/spring-boot-rest-validation/README.md)
 - [Spring Boot 分层架构练习](exercises/spring-boot-layered-architecture/README.md)
+- [Spring Boot JDBC 与事务练习](exercises/spring-boot-jdbc-transactions/README.md)
+- [Spring Boot 日志与请求追踪练习](exercises/spring-boot-logging/README.md)
+- [Spring Security 基础练习](exercises/spring-boot-security/README.md)
+- [企业级开发综合复盘练习](exercises/enterprise-basics-review/README.md)
+- [缓存基础练习](exercises/cache-basics/README.md)
+- [Redis 共享缓存练习](exercises/redis-cache/README.md)
+- [消息队列基础练习](exercises/message-queue-basics/README.md)
+- [搜索基础练习](exercises/search-basics/README.md)
+- [RPC 基础练习](exercises/rpc-basics/README.md)
 - [命令行课程管理主项目](flagship-project/README.md)
 - [写作规范](docs/zh-CN/writing-guide.md)
 - [主项目演进路线](docs/zh-CN/projects/flagship-roadmap.md)

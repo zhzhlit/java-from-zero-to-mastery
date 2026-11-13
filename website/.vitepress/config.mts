@@ -207,7 +207,38 @@ export default defineConfig({
           {
             text: 'Spring Boot 分层架构',
             link: '/zh-CN/guide/05-enterprise-development/04-spring-boot-layered-architecture'
+          },
+          {
+            text: 'Spring Boot JDBC 与事务',
+            link: '/zh-CN/guide/05-enterprise-development/05-spring-boot-jdbc-transactions'
+          },
+          {
+            text: 'Spring Boot 日志与请求追踪',
+            link: '/zh-CN/guide/05-enterprise-development/06-spring-boot-logging'
+          },
+          {
+            text: 'Spring Security 基础',
+            link: '/zh-CN/guide/05-enterprise-development/07-spring-boot-security'
+          },
+          {
+            text: '企业级开发综合复盘',
+            link: '/zh-CN/guide/05-enterprise-development/08-enterprise-basics-review'
           }
+        ]
+      },
+      {
+        text: '中间件与分布式',
+        items: [
+          { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' },
+          { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' },
+          { text: '事务提交后缓存失效', link: '/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation' },
+          { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' },
+          { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' },
+          { text: '消费者失败恢复与消息幂等', link: '/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox' },
+          { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' },
+          { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' },
+          { text: '搜索基础', link: '/zh-CN/guide/06-middleware-distributed/09-search-basics' },
+          { text: 'RPC 基础', link: '/zh-CN/guide/06-middleware-distributed/10-rpc-basics' }
         ]
       },
       {
@@ -229,6 +260,15 @@ export default defineConfig({
           { text: 'Spring Boot 配置练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-configuration' },
           { text: 'Spring Boot REST 校验练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-rest-validation' },
           { text: 'Spring Boot 分层架构练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-layered-architecture' },
+          { text: 'Spring Boot JDBC 与事务练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-jdbc-transactions' },
+          { text: 'Spring Boot 日志与请求追踪练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-logging' },
+          { text: 'Spring Security 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/spring-boot-security' },
+          { text: '企业级开发综合复盘练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/enterprise-basics-review' },
+          { text: '缓存基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/cache-basics' },
+          { text: 'Redis 共享缓存练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/redis-cache' },
+          { text: '消息队列基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/message-queue-basics' },
+          { text: '搜索基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/search-basics' },
+          { text: 'RPC 基础练习', link: 'https://github.com/zhzhlit/java-from-zero-to-mastery/tree/main/exercises/rpc-basics' },
           { text: '主项目路线', link: '/zh-CN/projects/flagship-roadmap' }
         ]
       },
@@ -415,7 +455,38 @@ export default defineConfig({
             {
               text: 'Spring Boot 分层架构',
               link: '/zh-CN/guide/05-enterprise-development/04-spring-boot-layered-architecture'
+            },
+            {
+              text: 'Spring Boot JDBC 与事务',
+              link: '/zh-CN/guide/05-enterprise-development/05-spring-boot-jdbc-transactions'
+            },
+            {
+              text: 'Spring Boot 日志与请求追踪',
+              link: '/zh-CN/guide/05-enterprise-development/06-spring-boot-logging'
+            },
+            {
+              text: 'Spring Security 基础',
+              link: '/zh-CN/guide/05-enterprise-development/07-spring-boot-security'
+            },
+            {
+              text: '企业级开发综合复盘',
+              link: '/zh-CN/guide/05-enterprise-development/08-enterprise-basics-review'
             }
+          ]
+        },
+        {
+          text: '中间件与分布式',
+          items: [
+            { text: '缓存基础', link: '/zh-CN/guide/06-middleware-distributed/01-cache-basics' },
+            { text: 'Redis 共享缓存', link: '/zh-CN/guide/06-middleware-distributed/02-redis-cache' },
+            { text: '事务提交后缓存失效', link: '/zh-CN/guide/06-middleware-distributed/03-cache-commit-invalidation' },
+            { text: '可靠失效与失败恢复', link: '/zh-CN/guide/06-middleware-distributed/04-cache-invalidation-outbox' },
+            { text: '消息队列基础', link: '/zh-CN/guide/06-middleware-distributed/05-message-queue-basics' },
+            { text: '消费者失败恢复与消息幂等', link: '/zh-CN/guide/06-middleware-distributed/06-consumer-recovery-inbox' },
+            { text: '毒消息、重试限制与死信处理', link: '/zh-CN/guide/06-middleware-distributed/07-retry-dead-letter' },
+            { text: '可靠发布与 Outbox 衔接', link: '/zh-CN/guide/06-middleware-distributed/08-outbox-stream-publishing' },
+            { text: '搜索基础', link: '/zh-CN/guide/06-middleware-distributed/09-search-basics' },
+            { text: 'RPC 基础', link: '/zh-CN/guide/06-middleware-distributed/10-rpc-basics' }
           ]
         },
         {

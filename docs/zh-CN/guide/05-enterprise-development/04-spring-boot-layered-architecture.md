@@ -143,4 +143,4 @@ public CourseDto create(CreateCourseRequest request) {
 
 上一章：[Spring Boot REST 校验](./03-spring-boot-rest-validation.md)
 
-继续按照[学习路线](../../roadmap/index.md)进入真实数据库集成与事务实践。
+下一章：[Spring Boot JDBC 与事务](./05-spring-boot-jdbc-transactions.md)，使用 H2 验证真实数据库写入与回滚。
