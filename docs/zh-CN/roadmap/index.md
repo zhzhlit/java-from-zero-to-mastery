@@ -34,7 +34,7 @@ verifiedAt: "2026-06-26"
 
 ## 当前可学习内容
 
-v0.7.1 已提供以下连续学习内容：
+v0.7.2 已提供以下连续学习内容：
 
 1. [第一个 Java 程序](../guide/01-getting-started/01-first-java-program.md)
 2. [开发环境与 IntelliJ IDEA](../guide/01-getting-started/02-development-environment-and-idea.md)
@@ -88,5 +88,6 @@ v0.7.1 已提供以下连续学习内容：
 50. [中间件综合实践](../guide/06-middleware-distributed/11-middleware-basics-review.md)
 51. [并发基础与线程任务](../guide/07-java-advanced/01-concurrency-basics.md)
 52. [线程池队列与拒绝策略](../guide/07-java-advanced/02-thread-pool-queues.md)
+53. [锁与复合状态](../guide/07-java-advanced/03-locks-composite-state.md)
 
-Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。计算机与工程基础、数据库与 Web、企业级开发及中间件组合实践均已有递进练习。Java 高级已提供 Executor、Future、超时取消、原子计数、有界队列与拒绝策略，下一步学习锁与复合状态，再进入内存模型、JVM 和虚拟线程；外部数据库及生产部署在后续云原生阶段展开。
+Java 核心阶段已提供连续课程、分级练习和主项目命令行课程管理入口。计算机与工程基础、数据库与 Web、企业级开发及中间件组合实践均已有递进练习。Java 高级已提供线程任务、有界队列、拒绝策略、原子计数与锁保护，下一步学习内存模型与安全发布，再进入 JVM 和虚拟线程；外部数据库及生产部署在后续云原生阶段展开。

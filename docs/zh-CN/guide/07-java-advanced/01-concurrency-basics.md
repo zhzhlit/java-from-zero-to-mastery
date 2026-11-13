@@ -25,7 +25,7 @@ mvn -B -pl exercises/concurrency-basics/starter -am test
 mvn -B -pl exercises/concurrency-basics/solution -am verify
 ```
 
-本章基础测试为 13 项，加入下一章后模块共 23 项。starter 的测试使用类级 `@Disabled`，完成后移除；不需要 Redis 或外部服务器。
+本章基础测试为 13 项，加入队列与锁练习后模块共 33 项。starter 的测试使用类级 `@Disabled`，完成后移除；不需要 Redis 或外部服务器。
 
 ## 任务不等于线程
 

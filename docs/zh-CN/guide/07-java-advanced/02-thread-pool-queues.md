@@ -25,7 +25,7 @@ mvn -B -pl exercises/concurrency-basics/starter -am test
 mvn -B -pl exercises/concurrency-basics/solution -am verify
 ```
 
-本章新增 10 项默认测试，模块共 23 项；starter 的两个测试类分别禁用。
+本章新增 10 项默认测试，加入锁练习后模块共 33 项；starter 的三个测试类分别禁用。
 
 ## 固定线程数不限制所有排队
 
@@ -76,4 +76,4 @@ BatchTaskRunner 用 invokeAll 共享一个预算，但 CallerRuns 可以让 exec
 
 10 项新增测试覆盖参数、线程命名、饱和拒绝、CallerRuns 位置与错误、关闭拒绝、purge、两种关闭、部分提交和预算边界。所有 gate 在 finally 中释放，线程池由测试创建者关闭。
 
-本章不实现自动扩容、在线调参、任务持久化或生产线程池监控。下一步按[学习路线](../../roadmap/index.md)进入锁与复合状态，再继续内存模型、JVM 和虚拟线程。
+本章不实现自动扩容、在线调参、任务持久化或生产线程池监控。下一章：[锁与复合状态](./03-locks-composite-state.md)。
